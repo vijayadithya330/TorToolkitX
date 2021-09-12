@@ -26,7 +26,7 @@ except:
         EDIT_SLEEP_SECS = 10
 
         # Telegram Upload Limit (in bytes)
-        TG_UP_LIMIT = 1700000000
+        TG_UP_LIMIT = 2700000000
 
         # Should force evething uploaded into Document
         FORCE_DOCUMENTS = False
@@ -63,7 +63,7 @@ except:
         RCLONE_ENABLED = False
 
         # If the user fails to select whether to use rclone or telegram to upload this will be the deafult.
-        DEFAULT_TIMEOUT = "leech"
+        DEFAULT_TIMEOUT = "/leech"
 
         # For vps set path here or you can use runtime too
         RCLONE_CONFIG = False
@@ -75,7 +75,7 @@ except:
         MAX_YTPLAYLIST_SIZE = 20
 
         # Max size of the torrent allowed
-        MAX_TORRENT_SIZE = 10
+        MAX_TORRENT_SIZE = 30
 
         # Set this to your bot username if you want to add the username of your bot at the end of the commands like
         # /leech@TorToolkitBot so the value will be @TorToolkitBot
