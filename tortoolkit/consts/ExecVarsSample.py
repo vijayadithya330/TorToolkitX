@@ -79,7 +79,7 @@ except:
 
         # Set this to your bot username if you want to add the username of your bot at the end of the commands like
         # /leech@TorToolkitBot so the value will be @TorToolkitBot
-        BOT_CMD_POSTFIX = "VTorrentProBot"
+        BOT_CMD_POSTFIX = "@VTorrentProBot"
 
         # Time out for the status Delete.
         STATUS_DEL_TOUT = 20
