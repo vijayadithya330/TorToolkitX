@@ -63,7 +63,7 @@ except:
         RCLONE_ENABLED = False
 
         # If the user fails to select whether to use rclone or telegram to upload this will be the deafult.
-        DEFAULT_TIMEOUT = "/leech"
+        DEFAULT_TIMEOUT = "leech"
 
         # For vps set path here or you can use runtime too
         RCLONE_CONFIG = False
