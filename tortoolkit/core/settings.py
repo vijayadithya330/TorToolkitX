@@ -26,8 +26,8 @@ TIMEOUT_SEC = 60
 # this file will contian all the handlers and code for settings
 # code can be more modular i think but not bothering now
 # todo make the code more modular
-no = "❌"
-yes = "✅"
+no = "✘"
+yes = "✔"
 # Central object is not used its Acknowledged
 tordb = TorToolkitDB()
 header = '<b>TorToolKitX by <a href="https://github.com/XcodersHub/TorToolkitX">XcodersHub</a></b>\n<u>ADMIN SETTINGS MENU - Beta v1</u>'
