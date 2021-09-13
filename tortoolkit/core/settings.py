@@ -26,7 +26,7 @@ TIMEOUT_SEC = 60
 # this file will contian all the handlers and code for settings
 # code can be more modular i think but not bothering now
 # todo make the code more modular
-no = "✖"
+no = "✘"
 yes = "✔"
 # Central object is not used its Acknowledged
 tordb = TorToolkitDB()
