@@ -435,7 +435,7 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
                             ]
                         )
 
-        await get_sub_menu("Go Back ⬅️", "mainmenu", session_id, menu)
+        await get_sub_menu("❮ Go Back", "mainmenu", session_id, menu)
         menu.append(
             [
                 KeyboardButtonCallback(
@@ -489,7 +489,7 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
             session_id,
         )
 
-        await get_sub_menu("Go Back ⬅️", "mainmenu", session_id, menu)
+        await get_sub_menu("❮ Go Back", "mainmenu", session_id, menu)
         menu.append(
             [
                 KeyboardButtonCallback(
