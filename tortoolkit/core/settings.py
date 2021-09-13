@@ -26,8 +26,8 @@ TIMEOUT_SEC = 60
 # this file will contian all the handlers and code for settings
 # code can be more modular i think but not bothering now
 # todo make the code more modular
-no = "❌"
-yes = "✅"
+no = "✘"
+yes = "✔"
 # Central object is not used its Acknowledged
 tordb = TorToolkitDB()
 header = '<b>TorToolKitX by <a href="https://github.com/XcodersHub/TorToolkitX">XcodersHub</a></b>\n<u>ADMIN SETTINGS MENU - Beta v1</u>'
@@ -356,7 +356,7 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
             "metainfo",
             session_id,
         )
-        await get_string_variable("COMPLETED_STR", menu, "compstr", session_id)
+        await get_string_variable("COMPLETED_STR", "⨸", menu, "Ⓥ", session_id)
         await get_string_variable("REMAINING_STR", menu, "remstr", session_id)
         await get_int_variable("TG_UP_LIMIT", menu, "tguplimit", session_id)
         await get_int_variable("MAX_TORRENT_SIZE", menu, "maxtorsize", session_id)
@@ -365,7 +365,7 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
         await get_int_variable("STATUS_DEL_TOUT", menu, "statusdeltime", session_id)
         # await get_string_variable("RCLONE_CONFIG",menu,"rcloneconfig",session_id)
         await get_sub_menu("☁️ Open Rclone Menu ☁️", "rclonemenu", session_id, menu)
-        await get_sub_menu("🕹️ Control Actions 🕹️", "ctrlacts", session_id, menu)
+        await get_sub_menu("⚙ Control Actions ⚙", "ctrlacts", session_id, menu)
         menu.append(
             [
                 KeyboardButtonCallback(
@@ -435,7 +435,7 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
                             ]
                         )
 
-        await get_sub_menu("Go Back ⬅️", "mainmenu", session_id, menu)
+        await get_sub_menu("Go Back «", "mainmenu", session_id, menu)
         menu.append(
             [
                 KeyboardButtonCallback(
@@ -489,7 +489,7 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
             session_id,
         )
 
-        await get_sub_menu("Go Back ⬅️", "mainmenu", session_id, menu)
+        await get_sub_menu("Go Back «", "mainmenu", session_id, menu)
         menu.append(
             [
                 KeyboardButtonCallback(
