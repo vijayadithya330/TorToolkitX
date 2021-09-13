@@ -365,7 +365,7 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
         await get_int_variable("STATUS_DEL_TOUT", menu, "statusdeltime", session_id)
         # await get_string_variable("RCLONE_CONFIG",menu,"rcloneconfig",session_id)
         await get_sub_menu("☁️ Open Rclone Menu ☁️", "rclonemenu", session_id, menu)
-        await get_sub_menu("⚙ Control Actions ⚙", "ctrlacts", session_id, menu)
+        await get_sub_menu("🕹 Control Actions 🕹", "ctrlacts", session_id, menu)
         menu.append(
             [
                 KeyboardButtonCallback(
