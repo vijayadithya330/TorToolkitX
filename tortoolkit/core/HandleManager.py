@@ -311,14 +311,14 @@ async def handle_leech_command(e):
                 await check_link(e, rclone, is_zip, is_ext, conf_mes)
             else:
                 await e.reply(
-                    "<b>DRIVE IS DISABLED BY THE ADMIN</b>", parse_mode="html"
+                    "<b>DRIVE IS DISABLED BY THE OWNER</b>", parse_mode="html"
                 )
         else:
             if get_val("LEECH_ENABLED"):
                 await check_link(e, rclone, is_zip, is_ext, conf_mes)
             else:
                 await e.reply(
-                    "<b>TG LEECH IS DISABLED BY THE ADMIN</b>", parse_mode="html"
+                    "<b>TG LEECH IS DISABLED BY THE OWNER</b>", parse_mode="html"
                 )
 
 
@@ -477,7 +477,7 @@ async def handle_settings_cb(e):
     if await is_admin(e.client, e.sender_id, e.chat_id):
         await handle_setting_callback(e)
     else:
-        await e.answer("⚠️ WARN ⚠️ Dont Touch Admin Settings.", alert=True)
+        await e.answer("⚠️ WARN ⚠️ Dont Touch Owner Settings.", alert=True)
 
 
 async def handle_upcancel_cb(e):
