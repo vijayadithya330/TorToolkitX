@@ -69,6 +69,7 @@ class QBTask(Status):
 
     async def create_message(self):
         msg = "<b>🗂Downloading:</b> <code>{}</code>\n".format(self._torrent.name)
+        msg += "\n"
         msg += "<b>♾Down:</b> {} <b>Up:</b> {}\n".format(
             human_readable_bytes(self._torrent.dlspeed, postfix="/s"),
             human_readable_bytes(self._torrent.upspeed, postfix="/s"),
@@ -230,6 +231,7 @@ class ARTask(Status):
             pass
 
         msg = "<b>🗂Downloading:</b> <code>{}</code>\n".format(downloading_dir_name)
+        msg += "\n"
         msg += "<b>♾Down:</b> {} <b>Up:</b> {}\n".format(
             self._dl_file.download_speed_string(), self._dl_file.upload_speed_string()
         )
@@ -368,6 +370,7 @@ class MegaDl(Status):
         # Getting the vars pre handed
 
         msg = "<b>🗂Downloading:</b> <code>{}</code>\n".format(self._dl_info["name"])
+        msg += "\n"
         msg += "<b>🏇Speed:</b> {}\n".format(human_readable_bytes(self._dl_info["speed"]))
         msg += "<b>⏱Progress:</b> {} - {}%\n".format(
             self.progress_bar(
