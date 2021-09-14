@@ -148,12 +148,12 @@ async def create_quality_menu(
 
             # add human bytes here
             if i == "tiny":
-                text = f"tiny [{human_readable_bytes(unique_formats[i][0])} - {human_readable_bytes(unique_formats[i][1])}] ➡️"
+                text = f"tiny [{human_readable_bytes(unique_formats[i][0])} - {human_readable_bytes(unique_formats[i][1])}] »"
                 cdata = (
                     f"ytdlsmenu|{i}|{message1.sender_id}|{suid}|{dest}"  # add user id
                 )
             else:
-                text = f"{i} [{human_readable_bytes(unique_formats[i][0])} - {human_readable_bytes(unique_formats[i][1])}] ➡️"
+                text = f"{i} [{human_readable_bytes(unique_formats[i][0])} - {human_readable_bytes(unique_formats[i][1])}] »"
                 cdata = (
                     f"ytdlsmenu|{i}|{message1.sender_id}|{suid}|{dest}"  # add user id
                 )
@@ -161,7 +161,7 @@ async def create_quality_menu(
         buttons.append(
             [
                 KeyboardButtonCallback(
-                    "Audios ➡️", f"ytdlsmenu|audios|{message1.sender_id}|{suid}|{dest}"
+                    "Audios »", f"ytdlsmenu|audios|{message1.sender_id}|{suid}|{dest}"
                 )
             ]
         )
@@ -264,7 +264,7 @@ async def handle_ytdl_callbacks(e: MessageLike):
                 buttons.append(
                     [
                         KeyboardButtonCallback(
-                            "Go Back 😒", f"ytdlmmenu|{data[2]}|{data[3]}|{data[4]}"
+                            "«Go Back", f"ytdlmmenu|{data[2]}|{data[3]}|{data[4]}"
                         )
                     ]
                 )
