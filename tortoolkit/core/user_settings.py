@@ -25,8 +25,8 @@ TIMEOUT_SEC = 60
 # this file will contian all the handlers and code for settings
 # code can be more modular i think but not bothering now
 # todo make the code more modular
-no = "❌"
-yes = "✅"
+no = "✗"
+yes = "🗸"
 # Central object is not used its Acknowledged
 tordb = TorToolkitDB()
 header = '<b>TorToolKitX by <a href="https://github.com/XcodersHub/TorToolkitX">XcodersHub</a></b>\n<u>USER SETTINGS MENU - v1</u>'
@@ -217,7 +217,7 @@ async def handle_user_settings(e, edit=False, msg="", submenu=None, sender_id=No
                             ]
                         )
 
-        await get_sub_menu("Go Back ⬅️", "mainmenu", sender_id, menu)
+        await get_sub_menu("«Go Back", "mainmenu", sender_id, menu)
         menu.append(
             [
                 KeyboardButtonCallback(
@@ -253,7 +253,7 @@ async def handle_user_settings(e, edit=False, msg="", submenu=None, sender_id=No
                 "disablethumb",
                 sender_id,
             )
-            await get_sub_menu("Go Back ⬅️", "mainmenu", sender_id, menu)
+            await get_sub_menu("«Go Back", "mainmenu", sender_id, menu)
             menu.append(
                 [
                     KeyboardButtonCallback(
@@ -276,7 +276,7 @@ async def handle_user_settings(e, edit=False, msg="", submenu=None, sender_id=No
                     )
                 ]
             )
-            await get_sub_menu("Go Back ⬅️", "mainmenu", sender_id, menu)
+            await get_sub_menu("«Go Back", "mainmenu", sender_id, menu)
             menu.append(
                 [
                     KeyboardButtonCallback(
