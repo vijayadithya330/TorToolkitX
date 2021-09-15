@@ -74,11 +74,11 @@ class QBTask(Status):
             human_readable_bytes(self._torrent.dlspeed, postfix="/s"),
             human_readable_bytes(self._torrent.upspeed, postfix="/s"),
         )
-        msg += "<b>⏱Progress:</b> {} - {}%\n".format(
+        msg += "<b>Progress:</b> {} - {}%\n".format(
             self.progress_bar(self._torrent.progress),
             round(self._torrent.progress * 100, 2),
         )
-        msg += "<b>👀Downloaded:</b> {} of {}\n".format(
+        msg += "<b>👀Status:</b> {} of {}\n".format(
             human_readable_bytes(self._torrent.downloaded),
             human_readable_bytes(self._torrent.total_size),
         )
@@ -235,11 +235,11 @@ class ARTask(Status):
         msg += "<b>♾Down:</b> {} <b>Up:</b> {}\n".format(
             self._dl_file.download_speed_string(), self._dl_file.upload_speed_string()
         )
-        msg += "<b>⏱Progress:</b> {} - {}%\n".format(
+        msg += "<b>Progress:</b> {} - {}%\n".format(
             self.progress_bar(self._dl_file.progress / 100),
             round(self._dl_file.progress, 2),
         )
-        msg += "<b>👀Downloaded:</b> {} of {}\n".format(
+        msg += "<b>👀Status:</b> {} of {}\n".format(
             human_readable_bytes(self._dl_file.completed_length),
             human_readable_bytes(self._dl_file.total_length),
         )
@@ -371,8 +371,8 @@ class MegaDl(Status):
 
         msg = "<b>🗂Downloading:</b> <code>{}</code>\n".format(self._dl_info["name"])
         msg += "\n"
-        msg += "<b>🏇Speed:</b> {}\n".format(human_readable_bytes(self._dl_info["speed"]))
-        msg += "<b>⏱Progress:</b> {} - {}%\n".format(
+        msg += "<b>⏱Speed:</b> {}\n".format(human_readable_bytes(self._dl_info["speed"]))
+        msg += "<b>Progress:</b> {} - {}%\n".format(
             self.progress_bar(
                 (self._dl_info["completed_length"] / self._dl_info["total_length"])
             ),
@@ -382,7 +382,7 @@ class MegaDl(Status):
                 2,
             ),
         )
-        msg += "<b>👀Downloaded:</b> {} of {}\n".format(
+        msg += "<b>👀Status:</b> {} of {}\n".format(
             human_readable_bytes(self._dl_info["completed_length"]),
             human_readable_bytes(self._dl_info["total_length"]),
         )
