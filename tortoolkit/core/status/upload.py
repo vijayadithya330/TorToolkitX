@@ -143,7 +143,7 @@ class RCUploadTask(Status):
         nstr = nstr.split(",")
         prg = nstr[1].strip("% ")
         prg = "👀Progress:- {} - {}%".format(self.progress_bar(prg), prg)
-        progress = "<b>📉Uploaded:- {} \n{} \n🏇Speed:- {} \n🕒ETA:- {}</b> \n<b>📡Using Engine:- </b><code>RCLONE</code>".format(
+        progress = "<b>📉Uploaded:- {} \n{} \n⏱Speed:- {} \n🕒ETA:- {}</b> \n<b>📡Using Engine:- </b><code>RCLONE</code>".format(
             nstr[0], prg, nstr[2], nstr[3].replace("🕒ETA", "")
         )
         return progress
