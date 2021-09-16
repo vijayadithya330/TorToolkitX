@@ -554,7 +554,7 @@ async def print_files(e, files, thash=None, path=None, size=None):
         else:
             msg += f'🗂 <a href="{link}">{i}</a>\n'
             
-            if path is not None and size is None:
+    if path is not None and size is None:
         size = calculate_size(path)
         transfer[0] += size
         size = human_readable_bytes(size)
