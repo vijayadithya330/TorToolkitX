@@ -539,7 +539,7 @@ async def errored_message(e, reason):
 
 
 async def print_files(e, files, thash=None, path=None, size=None):
-    msg = f"<a href='tg://user?id={e.sender_id}'>🧔🏻‍♂ʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇꜱ!👱🏻‍♀</a>\n\n#uploads\n\n"
+    msg = f"<a href='tg://user?id={e.sender_id}'>🧔🏻‍♂ʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇꜱ!👱🏻‍♀</a>\n\n"
 
     if path is not None and size is None:
         size = calculate_size(path)
