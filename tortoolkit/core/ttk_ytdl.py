@@ -618,7 +618,7 @@ async def handle_ytdl_playlist_down(e: MessageLike) -> None:
 
 async def print_files(e, files):
 
-    msg = "#uploads\n"
+    msg = " "
     if len(files) == 0:
         return
 
