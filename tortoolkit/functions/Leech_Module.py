@@ -90,11 +90,11 @@ async def check_link(msg, rclone=False, is_zip=False, extract=False, prev_msg=No
 
         if name is None:
             await omess.reply(
-                "This is not a torrent file to leech from. Send <code>.torrent</code> file",
+                "😡Fuck! This is not a torrent file to leech from. Send <code>.torrent</code> file",
                 parse_mode="html",
             )
         elif name.lower().endswith(".torrent"):
-            rmess = await omess.reply("Downloading the torrent file.")
+            rmess = await omess.reply("🤫Downloading your torrent file.")
 
             # not worring about the download location now
             # TODO do something to de register the torrents
@@ -161,7 +161,7 @@ async def check_link(msg, rclone=False, is_zip=False, extract=False, prev_msg=No
             return dl_path
         else:
             await omess.reply(
-                "This is not a torrent file to leech from. Send <code>.torrent</code> file",
+                "😡Fuck! This is not a torrent file to leech from. Send <code>.torrent</code> file",
                 parse_mode="html",
             )
 
@@ -234,7 +234,7 @@ async def check_link(msg, rclone=False, is_zip=False, extract=False, prev_msg=No
             await clear_stuff(dl_path)
 
         elif msg.raw_text.lower().endswith(".torrent"):
-            rmess = await omess.reply("Downloading the torrent file.")
+            rmess = await omess.reply("🤫Downloading Your The Torrent File.")
 
             # TODO do something to de register the torrents - done
             path = ""
@@ -539,7 +539,7 @@ async def errored_message(e, reason):
 
 
 async def print_files(e, files, thash=None, path=None, size=None):
-    msg = f"<a href='tg://user?id={e.sender_id}'>Done</a>\n#uploads\n"
+    msg = f"<a href='tg://user?id={e.sender_id}'>✔ Done!</a>\n\n#uploads\n\n"
 
     if path is not None and size is None:
         size = calculate_size(path)
@@ -558,11 +558,12 @@ async def print_files(e, files, thash=None, path=None, size=None):
     msg_li = []
     for i in files.keys():
         link = f"https://t.me/c/{str(chat_id)[4:]}/{files[i]}"
-        if len(msg + f'🚩 <a href="{link}">{i}</a>\n') > 4000:
+        if len(msg + f'🗂 <a href="{link}">{i}</a>\n') > 4000:
             msg_li.append(msg)
-            msg = f'🚩 <a href="{link}">{i}</a>\n'
+            msg = f'🗂 <a href="{link}">{i}</a>\n'
         else:
-            msg += f'🚩 <a href="{link}">{i}</a>\n'
+            msg += f'🗂 <a href="{link}">{i}</a>\n'
+            msg += f"\n\n🧑🏻‍💻<b>ᴘᴏᴡᴇʀᴇᴅ ʙʏ:</b> @VijayAdithyaa\n"
 
     for i in msg_li:
         await e.reply(i, parse_mode="html")
@@ -597,19 +598,19 @@ async def print_files(e, files, thash=None, path=None, size=None):
         buttons = []
         if index == 0:
             nextt = f"https://t.me/c/{chat_id}/{ids[index+1]}"
-            buttons.append(types.KeyboardButtonUrl("Next", nextt))
+            buttons.append(types.KeyboardButtonUrl("Next ❯", nextt))
             nextt = f'<a href="{nextt}">Next</a>\n'
         elif index == len(msgs) - 1:
             prev = f"https://t.me/c/{chat_id}/{ids[index-1]}"
-            buttons.append(types.KeyboardButtonUrl("Prev", prev))
+            buttons.append(types.KeyboardButtonUrl("❮ Prev", prev))
             prev = f'<a href="{prev}">Prev</a>\n'
         else:
             nextt = f"https://t.me/c/{chat_id}/{ids[index+1]}"
-            buttons.append(types.KeyboardButtonUrl("Next", nextt))
+            buttons.append(types.KeyboardButtonUrl("Next ❯", nextt))
             nextt = f'<a href="{nextt}">Next</a>\n'
 
             prev = f"https://t.me/c/{chat_id}/{ids[index-1]}"
-            buttons.append(types.KeyboardButtonUrl("Prev", prev))
+            buttons.append(types.KeyboardButtonUrl("❮ Prev", prev))
             prev = f'<a href="{prev}">Prev</a>\n'
 
         try:
