@@ -552,7 +552,7 @@ async def print_files(e, files, thash=None, path=None, size=None):
             msg_li.append(msg)
             msg = f'🗂 <a href="{link}">{i}</a>\n'
         else:
-            msg += f'🗂 <a href="{link}">{i}</a>\n'
+            msg += f'🗂 <a href="{link}">{i}</a>\n\n'
             
     if path is not None and size is None:
         size = calculate_size(path)
