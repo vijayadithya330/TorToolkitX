@@ -78,7 +78,7 @@ class TGUploadTask(Status):
         self._current_file = str(name)
 
     async def create_message(self):
-        msg = "<b>📤Uploading: 
+        msg = "<b>📤Uploading</b>"
         msg = "<b>🗂File Name:</b> <code>{}</code>\n".format(self._current_file)
         prg = 0
         try:
