@@ -68,7 +68,7 @@ class QBTask(Status):
         return self._omess.sender_id
 
     async def create_message(self):
-        msg = "<b>ˬDownloading:</b>
+        msg = "<b>ˬDownloading:</b>"
         msg = "\n"
         msg = "<b>🗂File Name:</b> <code>{}</code>\n".format(self._torrent.name)
         msg += "\n"
@@ -232,7 +232,7 @@ class ARTask(Status):
         except:
             pass
 
-        msg = "<b>ˬDownloading:</b>
+        msg = "<b>ˬDownloading:</b>"
         msg = "\n"
         msg = "<b>🗂File Name:</b> <code>{}</code>\n".format(downloading_dir_name)
         msg += "\n"
@@ -373,7 +373,7 @@ class MegaDl(Status):
     async def create_message(self):
         # Getting the vars pre handed
 
-        msg = "<b>ˬDownloading:</b>
+        msg = "<b>ˬDownloading:</b>"
         msg = "\n"
         msg = "<b>🗂File Name:</b> <code>{}</code>\n".format(self._dl_info["name"])
         msg += "\n"
