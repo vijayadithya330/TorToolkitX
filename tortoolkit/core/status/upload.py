@@ -74,7 +74,7 @@ class TGUploadTask(Status):
 
     async def uploaded_file(self, name=None):
         self._uploaded_files += 1
-        print("\n----🗂updates files to {}\n".format(self._uploaded_files))
+        print("\n----ˬUpdates Files to {}\n".format(self._uploaded_files))
         self._current_file = str(name)
 
     async def create_message(self):
