@@ -74,11 +74,12 @@ class TGUploadTask(Status):
 
     async def uploaded_file(self, name=None):
         self._uploaded_files += 1
-        print("\n----ˬUpdates Files to {}\n".format(self._uploaded_files))
+        print("\n----Updates Files to {}\n".format(self._uploaded_files))
         self._current_file = str(name)
 
     async def create_message(self):
-        msg = "<b>🗂Uploading:- </b> <code>{}</code>\n".format(self._current_file)
+        msg = "<b>📤Uploading: 
+        msg = "<b>🗂File Name:</b> <code>{}</code>\n".format(self._current_file)
         prg = 0
         try:
             prg = self._uploaded_files / self._files
