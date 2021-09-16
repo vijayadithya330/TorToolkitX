@@ -552,18 +552,18 @@ async def print_files(e, files, thash=None, path=None, size=None):
             msg_li.append(msg)
             msg = f'🗂 <a href="{link}">{i}</a>\n'
         else:
-            msg += f'🗂 <a href="{link}">{i}</a>\n\n'
+            msg += f'🗂 <a href="{link}">{i}</a>\n'
             
     if path is not None and size is None:
         size = calculate_size(path)
         transfer[0] += size
         size = human_readable_bytes(size)
-        msg += f"💽Uploaded Size:- {str(size)}\n\n"
+        msg += f"\n💽Uploaded Size:- {str(size)}\n\n"
     elif size is not None:
         transfer[0] += size
         size = human_readable_bytes(size)
-        msg += f"💽Uploaded Size:- {str(size)}\n\n"
-        msg += f"\n\n🧑🏻‍💻<b>ᴘᴏᴡᴇʀᴇᴅ ʙʏ:</b> @VijayAdithyaa\n"
+        msg += f"\n💽Uploaded Size:- {str(size)}\n\n"
+        msg += f"\n🧑🏻‍💻<b>ᴘᴏᴡᴇʀᴇᴅ ʙʏ:</b> @VijayAdithyaa\n"
 
     for i in msg_li:
         await e.reply(i, parse_mode="html")
