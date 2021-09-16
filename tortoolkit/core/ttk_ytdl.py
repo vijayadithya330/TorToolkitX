@@ -626,16 +626,16 @@ async def print_files(e, files):
 
     for i in files.keys():
         link = f"https://t.me/c/{str(chat_id)[4:]}/{files[i]}"
-        msg += f'🗂 <a href="{link}">{i}</a>\n\n'
+        msg += f'🎞 <a href="{link}">{i}</a>\n\n'
 
     rmsg = await e.client.get_messages(e.chat_id, ids=e.message_id)
     rmsg = await rmsg.get_reply_message()
     if rmsg is None:
         # msg += "\n<a href='tg://user?id={}'>Done<a>".format(rmsg.sender_id)
-        msg += "\n<a href='tg://user?id={}'>🧔🏻‍♂Your Requested Files👱🏻‍♀</a>".format(e.sender_id)
+        msg += "\n<a href='tg://user?id={}'>🧔🏻‍♂ʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇꜱ👱🏻‍♀</a>".format(e.sender_id)
         await e.reply(msg, parse_mode="html")
     else:
-        msg += "\n<a href='tg://user?id={}'>🧔🏻‍♂Your Requested Files👱🏻‍♀</a>".format(rmsg.sender_id)
+        msg += "\n<a href='tg://user?id={}'>🧔🏻‍♂ʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇꜱ👱🏻‍♀</a>".format(rmsg.sender_id)
         await rmsg.reply(msg, parse_mode="html")
         msg += "\n\n🧑🏻‍💻<b>ᴘᴏᴡᴇʀᴇᴅ ʙʏ:</b> @VijayAdithyaa\n"
 
