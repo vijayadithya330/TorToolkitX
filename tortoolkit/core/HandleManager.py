@@ -933,7 +933,7 @@ async def booted(client):
     chats = get_val("ALD_USR")
     for i in chats:
         try:
-            await client.send_message(i, "Hey Guys I Am Ready To Downloading...")
+            await client.send_message(i, "Guys I Am Ready To Downloading...")
         except Exception:
             torlog.info(f"Not found the entity {i}")
 
