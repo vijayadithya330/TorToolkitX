@@ -637,7 +637,7 @@ async def print_files(e, files):
     else:
         msg += "\n<a href='tg://user?id={}'>🧔🏻‍♂ʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇꜱ👱🏻‍♀</a>".format(rmsg.sender_id)
         await rmsg.reply(msg, parse_mode="html")
-        msg += "\n\n🧑🏻‍💻<b>ᴘᴏᴡᴇʀᴇᴅ ʙʏ:</b> @VijayAdithyaa\n"
+        msg += "\n🧑🏻‍💻<b>ᴘᴏᴡᴇʀᴇᴅ ʙʏ:</b> @VijayAdithyaa\n"
 
     if len(files) < 2:
         return
