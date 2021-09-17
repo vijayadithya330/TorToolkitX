@@ -228,8 +228,8 @@ async def check_progress_for_dl(
                 aria2, gid, event, previous_message, task, user_msg=user_msg
             )
         else:
-            await event.edit(
-                f"**Download completed:** `{file.name}`\n\n**Size:** `{file.total_length_string()}`",
+            await event.remove(
+                f"**Download completed:** {file.name}\n\n**Size:** {file.total_length_string()}",
                 buttons=None,
             )
             return True, "**Download Complete**"
