@@ -38,7 +38,7 @@ async def progress(
             seconds=estimated_total_time / 1000
         )
 
-        progress = "🎳[{0}{1}] = {2}%\n".format(
+        progress = "<b>🎳[{0}{1}] = {2}%</b>\n".format(
             "".join(
                 [get_val("COMPLETED_STR") for i in range(math.floor(percentage / 10))]
             ),
@@ -51,7 +51,7 @@ async def progress(
             round(percentage, 2),
         )
 
-        tmp = progress + "👀Status: {0} of {1}\n⏱Speed: {2}/s\n🕒ETA: {3}\n📡Using Engine: Telethon".format(
+        tmp = progress + "👀<b>Status:</b> {0} <b>Of</b> {1}\n⏱<b>Speed:</b> {2}/s\n🕒<b>ETA:</b> {3}\n📡<b>Using Engine:</b> Telethon".format(
             human_readable_bytes(current),
             human_readable_bytes(total),
             human_readable_bytes(speed),
@@ -61,11 +61,11 @@ async def progress(
         try:
             if not message.photo:
                 await message.edit(
-                    text="**📤__ᴜᴘʟᴏᴀᴅɪɴɢ...__** \n\n🗂File Name: {} \n{}".format(file_name, tmp)
+                    text="**📤__ᴜᴘʟᴏᴀᴅɪɴɢ...__** \n\n🗂<b>File Name:</b> {} \n{}".format(file_name, tmp)
                 )
             else:
                 await message.edit(
-                    caption="**📤__ᴜᴘʟᴏᴀᴅɪɴɢ...__** \n\n🗂File Name: {} \n{}".format(file_name, tmp)
+                    caption="**📤__ᴜᴘʟᴏᴀᴅɪɴɢ...__** \n\n🗂<b>File Name:</b> {} \n{}".format(file_name, tmp)
                 )
         except Exception as e:
             logging.error(e)
