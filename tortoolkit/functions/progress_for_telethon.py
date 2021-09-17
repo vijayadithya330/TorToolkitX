@@ -51,7 +51,7 @@ async def progress(
             round(percentage, 2),
         )
 
-        tmp = ♾progress + "{0} of {1}\n⏱Speed: {2}/s\n🕒ETA: {3}\n📡Using engine: Telethon".format(
+        tmp = progress + "{0} of {1}\n⏱Speed: {2}/s\n🕒ETA: {3}\n📡Using engine: Telethon".format(
             human_readable_bytes(current),
             human_readable_bytes(total),
             human_readable_bytes(speed),
