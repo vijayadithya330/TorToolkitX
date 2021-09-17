@@ -315,7 +315,7 @@ async def upload_a_file(
             message.chat_id, message.id, user_msg.sender_id
         )
         buts = [KeyboardButtonCallback("🗑Cancel upload.", data.encode("UTF-8"))]
-        msg = await message.reply("**📤__ᴜᴘʟᴏᴀᴅɪɴɢ...__** `{}`".format(file_name), buttons=buts)
+        msg = await message.reply("**📤__ᴜᴘʟᴏᴀᴅɪɴɢ...__** `\n🗂{}`".format(file_name), buttons=buts)
 
     else:
         msg = message
