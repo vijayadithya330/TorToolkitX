@@ -601,7 +601,7 @@ async def handle_pincode_cb(e):
 
 
 async def upload_document_f(message):
-    imsegd = await message.reply("processing ...")
+    imsegd = await message.reply("⏳Processing ...")
     imsegd = await message.client.get_messages(message.chat_id, ids=imsegd.id)
     if await is_admin(
         message.client, message.sender_id, message.chat_id, force_owner=True
@@ -613,7 +613,7 @@ async def upload_document_f(message):
             )
             # torlog.info(recvd_response)
     else:
-        await message.reply("Only for owner")
+        await message.reply("🧑🏻‍💻Only for owner")
     await imsegd.delete()
 
 
@@ -644,7 +644,7 @@ async def set_password_zip(message):
 
 
 async def start_handler(event):
-    msg = "Hello This is TorToolkitX running on heroku an instance of <a href='https://github.com/XcodersHub/TorToolkitX'>This Repo</a>. Try the repo for yourself and dont forget to put a STAR and fork."
+    msg = "Hello This is V-Torrent Pro"
     await event.reply(msg, parse_mode="html")
 
 
@@ -802,9 +802,9 @@ async def about_me(message):
     val1 = get_val("LEECH_ENABLED")
     if val1 is not None:
         if val1:
-            leen = "Leech command enabled by admin."
+            leen = "⚠️Leech command enabled."
         else:
-            leen = "Leech command disabled by admin."
+            leen = "⚠️Leech command disabled."
     else:
         leen = "N/A"
 
@@ -881,14 +881,14 @@ async def set_thumb_cmd(e):
 
     user_db.set_var("DISABLE_THUMBNAIL", False, str(e.sender_id))
     await e.reply(
-        "Thumbnail set. try using /usettings to get more control. Can be used in private too."
+        "Thumbnail set. try using /usettings to get more control."
     )
 
 
 async def clear_thumb_cmd(e):
     user_db.set_var("DISABLE_THUMBNAIL", True, str(e.sender_id))
     await e.reply(
-        "Thumbnail disabled. Try using /usettings to get more control. Can be used in private too."
+        "Thumbnail disabled. Try using /usettings to get more control."
     )
 
 
@@ -933,7 +933,7 @@ async def booted(client):
     chats = get_val("ALD_USR")
     for i in chats:
         try:
-            await client.send_message(i, "Guys I Am Ready To Downloading...")
+            await client.send_message(i, "Hey Guys I Am Ready To Downloading...")
         except Exception:
             torlog.info(f"Not found the entity {i}")
 
