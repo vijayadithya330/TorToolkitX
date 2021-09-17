@@ -93,7 +93,7 @@ async def upload_handel(
             data = "upcancel {} {} {}".format(
                 message.chat_id, message.id, sup_mes.sender_id
             )
-            buts = [KeyboardButtonCallback("🗑Cancel upload.", data.encode("UTF-8"))]
+            buts = [KeyboardButtonCallback("🗑Cancel Upload", data.encode("UTF-8"))]
             message = await message.edit(buttons=buts)
 
         for file in directory_contents:
@@ -178,7 +178,7 @@ async def upload_handel(
                 data = "upcancel {} {} {}".format(
                     message.chat_id, message.id, sup_mes.sender_id
                 )
-                buts = [KeyboardButtonCallback("🗑Cancel upload.", data.encode("UTF-8"))]
+                buts = [KeyboardButtonCallback("🗑Cancel Upload", data.encode("UTF-8"))]
                 await message.edit(buttons=buts)
 
             for file in dircon:
@@ -235,7 +235,7 @@ async def upload_handel(
                 data = "upcancel {} {} {}".format(
                     message.chat_id, message.id, sup_mes.sender_id
                 )
-                buts = [KeyboardButtonCallback("🗑Cancel upload.", data.encode("UTF-8"))]
+                buts = [KeyboardButtonCallback("🗑Cancel Upload", data.encode("UTF-8"))]
                 await message.edit(buttons=buts)
             # print(updb)
             if black_list_exts(path):
@@ -314,7 +314,7 @@ async def upload_a_file(
         data = "upcancel {} {} {}".format(
             message.chat_id, message.id, user_msg.sender_id
         )
-        buts = [KeyboardButtonCallback("🗑Cancel upload.", data.encode("UTF-8"))]
+        buts = [KeyboardButtonCallback("🗑Cancel Upload", data.encode("UTF-8"))]
         msg = await message.reply("**📤__ᴜᴘʟᴏᴀᴅɪɴɢ...__** `\n🗂{}`".format(file_name), buttons=buts)
 
     else:
