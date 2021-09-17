@@ -29,7 +29,7 @@ no = "✗"
 yes = "✔"
 # Central object is not used its Acknowledged
 tordb = TorToolkitDB()
-header = '<b>TorToolKitX by <a href="https://github.com/XcodersHub/TorToolkitX">XcodersHub</a></b>\n<u>USER SETTINGS MENU - v1</u>'
+header = '<b>V-Torrent Pro By: https://telegra.ph/file/f6b18b82c770c2f287da6.png'
 
 
 async def handle_user_setting_callback(e):
