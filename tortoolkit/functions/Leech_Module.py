@@ -539,7 +539,7 @@ async def errored_message(e, reason):
 
 
 async def print_files(e, files, thash=None, path=None, size=None):
-    msg = f"<a href='tg://user?id={e.sender_id}'>🧔🏻‍♂ʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇꜱ!👱🏻‍♀</a>\n\n"
+    msg = f"<a href='tg://user?id={e.sender_id}'>🧔ʜᴇʏ🏻‍♂ ʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇꜱ!👱🏻‍♀</a>\n\n"
 
     if len(files) == 0:
         return
@@ -548,21 +548,21 @@ async def print_files(e, files, thash=None, path=None, size=None):
     msg_li = []
     for i in files.keys():
         link = f"https://t.me/c/{str(chat_id)[4:]}/{files[i]}"
-        if len(msg + f'🗂 <a href="{link}">{i}</a>\n') > 4000:
+        if len(msg + f'🗂<a href="{link}">{i}</a>\n') > 4000:
             msg_li.append(msg)
-            msg = f'🗂 <a href="{link}">{i}</a>\n'
+            msg = f'🗂<a href="{link}">{i}</a>\n'
         else:
-            msg += f'🗂 <a href="{link}">{i}</a>\n'
+            msg += f'🗂<a href="{link}">{i}</a>\n'
             
     if path is not None and size is None:
         size = calculate_size(path)
         transfer[0] += size
         size = human_readable_bytes(size)
-        msg += f"\n💽Uploaded Size:- {str(size)}\n"
+        msg += f"\n💽<b>ᴜᴘʟᴏᴀᴅᴇᴅ ꜱɪᴢᴇ:</b> {str(size)}\n"
     elif size is not None:
         transfer[0] += size
         size = human_readable_bytes(size)
-        msg += f"\n💽Uploaded Size:- {str(size)}\n"
+        msg += f"\n💽<b>ᴜᴘʟᴏᴀᴅᴇᴅ ꜱɪᴢᴇ:</b> {str(size)}\n"
         msg += f"\n🧑🏻‍💻<b>ᴘᴏᴡᴇʀᴇᴅ ʙʏ:</b> @VijayAdithyaa\n"
 
     for i in msg_li:
