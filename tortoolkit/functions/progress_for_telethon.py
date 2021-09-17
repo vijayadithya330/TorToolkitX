@@ -61,11 +61,11 @@ async def progress(
         try:
             if not message.photo:
                 await message.edit(
-                    text="**📤__ᴜᴘʟᴏᴀᴅɪɴɢ...__** `\n\n🗂File Name:{}`{}".format(file_name, tmp)
+                    text="**📤__ᴜᴘʟᴏᴀᴅɪɴɢ...__** \n\n🗂File Name: {} \n{}".format(file_name, tmp)
                 )
             else:
                 await message.edit(
-                    caption="**📤__ᴜᴘʟᴏᴀᴅɪɴɢ...__** `\n\n🗂File Name:{}`{}".format(file_name, tmp)
+                    caption="**📤__ᴜᴘʟᴏᴀᴅɪɴɢ...__** \n\n🗂File Name: {} \n{}".format(file_name, tmp)
                 )
         except Exception as e:
             logging.error(e)
