@@ -315,7 +315,7 @@ async def upload_a_file(
             message.chat_id, message.id, user_msg.sender_id
         )
         buts = [KeyboardButtonCallback("🗑Cancel upload.", data.encode("UTF-8"))]
-        msg = await message.reply("**📤__ᴜᴘʟᴏᴀᴅɪɴɢ...__** `{}`".format🗂(file_name), buttons=buts)
+        msg = await message.reply("**📤__ᴜᴘʟᴏᴀᴅɪɴɢ...__** `{}`".format(file_name), buttons=buts)
 
     else:
         msg = message
@@ -453,7 +453,7 @@ async def upload_a_file(
                         thumb=thumb_path,
                     )
     except Exception as e:
-        if str(e).find("cancel") != -1:
+        if str(e).find("🗑cancel") != -1:
             torlog.info("Canceled an upload lol")
             await msg.edit(f"Failed to upload {e}", buttons=None)
         else:
@@ -727,7 +727,7 @@ async def upload_single_file(
             if thumb is not None:
                 os.remove(thumb)
     except Exception as e:
-        if str(e).find("cancel") != -1:
+        if str(e).find("🗑cancel") != -1:
             torlog.info("Canceled an upload lol")
             try:
                 await message_for_progress_display.edit(f"Failed to upload {e}")
