@@ -23,7 +23,7 @@ async def progress(
             # dirty alt. was not able to find something to stop upload
             # todo inspect with "StopAsyncIteration"
             if updb.get_cancel_status(cancel_msg.chat_id, cancel_msg.id):
-                raise Exception("🗑Cancel Upload")
+                raise Exception("🗑 ᴄᴀɴᴄᴇʟ ᴛᴏ ᴜᴘʟᴏᴀᴅ")
 
         # if round(current / total * 100, 0) % 5 == 0:
         percentage = current * 100 / total
