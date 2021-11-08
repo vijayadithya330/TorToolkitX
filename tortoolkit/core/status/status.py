@@ -409,7 +409,7 @@ class MegaDl(Status):
                 msg,
                 parse_mode="html",
                 buttons=[
-                    KeyboardButtonCallback("🗑Cancel Mega DL", data=data.encode("UTF-8"))
+                    KeyboardButtonCallback("🗑 ᴄᴀɴᴄᴇʟ", data=data.encode("UTF-8"))
                 ],
             )
 
