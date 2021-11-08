@@ -93,7 +93,7 @@ async def upload_handel(
             data = "upcancel {} {} {}".format(
                 message.chat_id, message.id, sup_mes.sender_id
             )
-            buts = [KeyboardButtonCallback("🗑Cancel Upload", data.encode("UTF-8"))]
+            buts = [KeyboardButtonCallback("🗑 ᴄᴀɴᴄᴇʟ ᴛᴏ ᴜᴘʟᴏᴀᴅ", data.encode("UTF-8"))]
             message = await message.edit(buttons=buts)
 
         for file in directory_contents:
@@ -178,7 +178,7 @@ async def upload_handel(
                 data = "upcancel {} {} {}".format(
                     message.chat_id, message.id, sup_mes.sender_id
                 )
-                buts = [KeyboardButtonCallback("🗑Cancel Upload", data.encode("UTF-8"))]
+                buts = [KeyboardButtonCallback("🗑 ᴄᴀɴᴄᴇʟ ᴛᴏ ᴜᴘʟᴏᴀᴅ", data.encode("UTF-8"))]
                 await message.edit(buttons=buts)
 
             for file in dircon:
@@ -235,7 +235,7 @@ async def upload_handel(
                 data = "upcancel {} {} {}".format(
                     message.chat_id, message.id, sup_mes.sender_id
                 )
-                buts = [KeyboardButtonCallback("🗑Cancel Upload", data.encode("UTF-8"))]
+                buts = [KeyboardButtonCallback("🗑 ᴄᴀɴᴄᴇʟ ᴛᴏ ᴜᴘʟᴏᴀᴅ", data.encode("UTF-8"))]
                 await message.edit(buttons=buts)
             # print(updb)
             if black_list_exts(path):
@@ -314,7 +314,7 @@ async def upload_a_file(
         data = "upcancel {} {} {}".format(
             message.chat_id, message.id, user_msg.sender_id
         )
-        buts = [KeyboardButtonCallback("🗑Cancel Upload", data.encode("UTF-8"))]
+        buts = [KeyboardButtonCallback("🗑 ᴄᴀɴᴄᴇʟ ᴛᴏ ᴜᴘʟᴏᴀᴅ", data.encode("UTF-8"))]
         msg = await message.reply("**📤__ᴜᴘʟᴏᴀᴅɪɴɢ...__** `\n🗂<b>File Name:</b> {}`".format(file_name), buttons=buts)
 
     else:
@@ -453,7 +453,7 @@ async def upload_a_file(
                         thumb=thumb_path,
                     )
     except Exception as e:
-        if str(e).find("🗑cancel") != -1:
+        if str(e).find("🗑 ᴄᴀɴᴄᴇʟ") != -1:
             torlog.info("Canceled an upload lol")
             await msg.edit(f"Failed to upload {e}", buttons=None)
         else:
@@ -555,7 +555,7 @@ async def upload_single_file(
                 [
                     [
                         InlineKeyboardButton(
-                            "🗑Cancel Upload", callback_data=data.encode("UTF-8")
+                            "🗑 ᴄᴀɴᴄᴇʟ ᴛᴏ ᴜᴘʟᴏᴀᴅ", callback_data=data.encode("UTF-8")
                         )
                     ]
                 ]
@@ -727,7 +727,7 @@ async def upload_single_file(
             if thumb is not None:
                 os.remove(thumb)
     except Exception as e:
-        if str(e).find("🗑cancel") != -1:
+        if str(e).find("🗑 ᴄᴀɴᴄᴇʟ") != -1:
             torlog.info("Canceled an upload lol")
             try:
                 await message_for_progress_display.edit(f"Failed to upload {e}")
