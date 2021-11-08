@@ -72,7 +72,7 @@ async def handle_setting_callback(e):
         await mmes.edit(f"{mmes.raw_text}\n/ignore to go back", buttons=None)
         val = await get_value(e)
 
-        await general_input_manager(e, mmes, "COMPLETED_STR", "str", val[0], db, None)
+        await general_input_manager(e, mmes, "ᴄᴏᴍᴘʟᴇᴛᴇᴅ_ꜱᴛʀ", "str", val[0], db, None)
 
     elif cmd[1] == "remstr":
         # what will a general manager require
@@ -86,7 +86,7 @@ async def handle_setting_callback(e):
         await mmes.edit(f"{mmes.raw_text}\n/ignore to go back", buttons=None)
         val = await get_value(e)
 
-        await general_input_manager(e, mmes, "REMAINING_STR", "str", val[0], db, None)
+        await general_input_manager(e, mmes, "ʀᴇᴍᴀɪɴɪɴɢ_ꜱᴛʀ", "str", val[0], db, None)
 
     elif cmd[1] == "tguplimit":
         # what will a general manager require
@@ -100,7 +100,7 @@ async def handle_setting_callback(e):
         await mmes.edit(f"{mmes.raw_text}\n/ignore to go back", buttons=None)
         val = await get_value(e)
 
-        await general_input_manager(e, mmes, "TG_UP_LIMIT", "int", val, db, None)
+        await general_input_manager(e, mmes, "ᴛɢ_ᴜᴘ_ʟɪᴍɪᴛ", "int", val, db, None)
 
     elif cmd[1] == "maxtorsize":
         # what will a general manager require
@@ -114,7 +114,7 @@ async def handle_setting_callback(e):
         await mmes.edit(f"{mmes.raw_text}\n/ignore to go back", buttons=None)
         val = await get_value(e)
 
-        await general_input_manager(e, mmes, "MAX_TORRENT_SIZE", "int", val, db, None)
+        await general_input_manager(e, mmes, "ᴍᴀx_ᴛᴏʀʀᴇɴᴛ_ꜱɪᴢᴇ", "int", val, db, None)
 
     elif cmd[1] == "maxytplsize":
         # what will a general manager require
@@ -129,7 +129,7 @@ async def handle_setting_callback(e):
         val = await get_value(e)
 
         await general_input_manager(
-            e, mmes, "MAX_YTPLAYLIST_SIZE", "int", val, db, None
+            e, mmes, "ᴍᴀx_ʏᴛᴘʟᴀʏʟɪꜱᴛ_ꜱɪᴢᴇ", "int", val, db, None
         )
 
     elif cmd[1] == "rclonemenu":
@@ -255,7 +255,7 @@ async def handle_setting_callback(e):
         await mmes.edit(f"{mmes.raw_text}\n/ignore to go back", buttons=None)
         val = await get_value(e)
 
-        await general_input_manager(e, mmes, "EDIT_SLEEP_SECS", "int", val, db, None)
+        await general_input_manager(e, mmes, "ꜱᴛᴀᴛᴜꜱ_ᴅᴇʟ_ᴛᴏᴜᴛ", "int", val, db, None)
     elif cmd[1] == "statusdeltime":
         await e.answer(
             "Type the new value for STATUS_DEL_TOUT. Note that integer is expected.",
@@ -266,7 +266,7 @@ async def handle_setting_callback(e):
         await mmes.edit(f"{mmes.raw_text}\n/ignore to go back", buttons=None)
         val = await get_value(e)
 
-        await general_input_manager(e, mmes, "STATUS_DEL_TOUT", "int", val, db, None)
+        await general_input_manager(e, mmes, "ꜱᴛᴀᴛᴜꜱ_ᴅᴇʟ_ᴛᴏᴜᴛ", "int", val, db, None)
     elif cmd[1] == "fastupload":
         await e.answer("")
 
