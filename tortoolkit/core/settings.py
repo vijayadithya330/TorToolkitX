@@ -356,20 +356,20 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
             "metainfo",
             session_id,
         )
-        await get_string_variable("COMPLETED_STR", menu, "compstr", session_id)
-        await get_string_variable("REMAINING_STR", menu, "remstr", session_id)
-        await get_int_variable("TG_UP_LIMIT", menu, "tguplimit", session_id)
-        await get_int_variable("MAX_TORRENT_SIZE", menu, "maxtorsize", session_id)
-        await get_int_variable("MAX_YTPLAYLIST_SIZE", menu, "maxytplsize", session_id)
-        await get_int_variable("EDIT_SLEEP_SECS", menu, "editsleepsec", session_id)
-        await get_int_variable("STATUS_DEL_TOUT", menu, "statusdeltime", session_id)
+        await get_string_variable("ᴄᴏᴍᴘʟᴇᴛᴇᴅ ꜱᴛʀ", menu, "compstr", session_id)
+        await get_string_variable("ʀᴇᴍᴀɪɴɪɴɢ ꜱᴛʀ", menu, "remstr", session_id)
+        await get_int_variable("ᴛᴇʟᴇɢʀᴀᴍ ᴜᴘʟᴏᴀᴅ ʟɪᴍɪᴛ", menu, "tguplimit", session_id)
+        await get_int_variable("ᴍᴀx ᴛᴏʀʀᴇɴᴛ ꜱɪᴢᴇ", menu, "maxtorsize", session_id)
+        await get_int_variable("ᴍᴀx ʏᴏᴜᴛᴜʙᴇ ᴘʟᴀʏʟɪꜱᴛ ꜱɪᴢᴇ", menu, "maxytplsize", session_id)
+        await get_int_variable("ᴇᴅɪᴛ ꜱʟᴇᴇᴘ ꜱᴇᴄᴛɪᴏɴ", menu, "editsleepsec", session_id)
+        await get_int_variable("ꜱᴛᴀᴛᴜꜱ ᴅᴇʟᴇᴛᴇ ᴛᴏᴜᴛᴇᴅ", menu, "statusdeltime", session_id)
         # await get_string_variable("RCLONE_CONFIG",menu,"rcloneconfig",session_id)
-        await get_sub_menu("☁ Open Rclone Menu ☁", "rclonemenu", session_id, menu)
-        await get_sub_menu("⚙ Control Actions ⚙", "ctrlacts", session_id, menu)
+        await get_sub_menu("☁ ᴏᴘᴇɴ ʀᴄʟᴏɴᴇ ᴍᴇɴᴜ ☁", "rclonemenu", session_id, menu)
+        await get_sub_menu("⚙ ᴄᴏɴᴛʀᴏʟ ᴀᴄᴛɪᴏɴꜱ ⚙", "ctrlacts", session_id, menu)
         menu.append(
             [
                 KeyboardButtonCallback(
-                    "Close Menu", f"settings selfdest {session_id}".encode("UTF-8")
+                    "❮ ᴄʟᴏꜱᴇ ᴍᴇɴᴜ", f"settings selfdest {session_id}".encode("UTF-8")
                 )
             ]
         )
@@ -435,11 +435,11 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
                             ]
                         )
 
-        await get_sub_menu("❮ Go Back", "mainmenu", session_id, menu)
+        await get_sub_menu("❮ ɢᴏ ʙᴀᴄᴋ", "mainmenu", session_id, menu)
         menu.append(
             [
                 KeyboardButtonCallback(
-                    "Close Menu", f"settings selfdest {session_id}".encode("UTF-8")
+                    "❮ ᴄʟᴏꜱᴇ ᴍᴇɴᴜ", f"settings selfdest {session_id}".encode("UTF-8")
                 )
             ]
         )
@@ -489,11 +489,11 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
             session_id,
         )
 
-        await get_sub_menu("❮ Go Back", "mainmenu", session_id, menu)
+        await get_sub_menu("❮ ɢᴏ ʙᴀᴄᴋ", "mainmenu", session_id, menu)
         menu.append(
             [
                 KeyboardButtonCallback(
-                    "Close Menu", f"settings selfdest {session_id}".encode("UTF-8")
+                    "❮ ᴄʟᴏꜱᴇ ᴍᴇɴᴜ", f"settings selfdest {session_id}".encode("UTF-8")
                 )
             ]
         )
