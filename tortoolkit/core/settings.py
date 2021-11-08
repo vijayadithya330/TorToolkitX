@@ -344,25 +344,25 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
 
     if submenu is None:
         await get_bool_variable(
-            "LOCKED_USERS", "Lock the Group", menu, "usrlock", session_id
+            "LOCKED_USERS", " ʟᴏᴄᴋ ᴛʜᴇ ɢʀᴏᴜᴘ ", menu, "usrlock", session_id
         )
         await get_bool_variable(
-            "FORCE_DOCUMENTS", "FORCE_DOCUMENTS", menu, "fdocs", session_id
+            "FORCE_DOCUMENTS", " ꜰᴏʀᴄᴇ ᴅᴏᴄᴜᴍᴇɴᴛꜱ ", menu, "fdocs", session_id
         )
         await get_bool_variable(
             "METAINFO_BOT",
-            "[MetainfoRoBot]Get metadata of files in this group.",
+            "[ᴍᴇᴛᴀɪɴꜰᴏʀᴏʙᴏᴛ]ɢᴇᴛ ᴍᴇᴛᴀᴅᴀᴛᴀ ᴏꜰ ꜰɪʟᴇꜱ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ.",
             menu,
             "metainfo",
             session_id,
         )
-        await get_string_variable("ᴄᴏᴍᴘʟᴇᴛᴇᴅ ꜱᴛʀ", menu, "compstr", session_id)
-        await get_string_variable("ʀᴇᴍᴀɪɴɪɴɢ ꜱᴛʀ", menu, "remstr", session_id)
-        await get_int_variable("ᴛᴇʟᴇɢʀᴀᴍ ᴜᴘʟᴏᴀᴅ ʟɪᴍɪᴛ", menu, "tguplimit", session_id)
-        await get_int_variable("ᴍᴀx ᴛᴏʀʀᴇɴᴛ ꜱɪᴢᴇ", menu, "maxtorsize", session_id)
-        await get_int_variable("ᴍᴀx ʏᴏᴜᴛᴜʙᴇ ᴘʟᴀʏʟɪꜱᴛ ꜱɪᴢᴇ", menu, "maxytplsize", session_id)
-        await get_int_variable("ᴇᴅɪᴛ ꜱʟᴇᴇᴘ ꜱᴇᴄᴛɪᴏɴ", menu, "editsleepsec", session_id)
-        await get_int_variable("ꜱᴛᴀᴛᴜꜱ ᴅᴇʟᴇᴛᴇ ᴛᴏᴜᴛᴇᴅ", menu, "statusdeltime", session_id)
+        await get_string_variable("ᴄᴏᴍᴘʟᴇᴛᴇᴅ_ꜱᴛʀ", menu, "compstr", session_id)
+        await get_string_variable("ʀᴇᴍᴀɪɴɪɴɢ_ꜱᴛʀ", menu, "remstr", session_id)
+        await get_int_variable("ᴛɢ ᴜᴘ_ʟɪᴍɪᴛ", menu, "tguplimit", session_id)
+        await get_int_variable("ᴍᴀx_ᴛᴏʀʀᴇɴᴛ_ꜱɪᴢᴇ", menu, "maxtorsize", session_id)
+        await get_int_variable("ᴍᴀx_ʏᴛᴘʟᴀʏʟɪꜱᴛ_ꜱɪᴢᴇ", menu, "maxytplsize", session_id)
+        await get_int_variable("ᴇᴅɪᴛ ꜱʟᴇᴇᴘ_ꜱᴇᴄꜱ", menu, "editsleepsec", session_id)
+        await get_int_variable("ꜱᴛᴀᴛᴜꜱ_ᴅᴇʟ_ᴛᴏᴜᴛ", menu, "statusdeltime", session_id)
         # await get_string_variable("RCLONE_CONFIG",menu,"rcloneconfig",session_id)
         await get_sub_menu("☁ ᴏᴘᴇɴ ʀᴄʟᴏɴᴇ ᴍᴇɴᴜ ☁", "rclonemenu", session_id, menu)
         await get_sub_menu("⚙ ᴄᴏɴᴛʀᴏʟ ᴀᴄᴛɪᴏɴꜱ ⚙", "ctrlacts", session_id, menu)
