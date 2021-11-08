@@ -691,8 +691,8 @@ async def confirm_buttons(e, val):
     await e.edit(
         f"Confirm the input :- <u>{val}</u>",
         buttons=[
-            KeyboardButtonCallback("Yes", "confirmsetting true"),
-            KeyboardButtonCallback("No", "confirmsetting false"),
+            KeyboardButtonCallback("ʏᴇꜱ", "confirmsetting true"),
+            KeyboardButtonCallback("ɴᴏ", "confirmsetting false"),
         ],
         parse_mode="html",
     )
