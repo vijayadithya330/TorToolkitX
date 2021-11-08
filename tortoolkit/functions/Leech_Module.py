@@ -598,19 +598,19 @@ async def print_files(e, files, thash=None, path=None, size=None):
         buttons = []
         if index == 0:
             nextt = f"https://t.me/c/{chat_id}/{ids[index+1]}"
-            buttons.append(types.KeyboardButtonUrl("Next ❯", nextt))
+            buttons.append(types.KeyboardButtonUrl("ɴᴇxᴛ ❯", nextt))
             nextt = f'<a href="{nextt}">Next</a>\n'
         elif index == len(msgs) - 1:
             prev = f"https://t.me/c/{chat_id}/{ids[index-1]}"
-            buttons.append(types.KeyboardButtonUrl("❮ Prev", prev))
+            buttons.append(types.KeyboardButtonUrl("❮ ᴘʀᴇᴠ", prev))
             prev = f'<a href="{prev}">Prev</a>\n'
         else:
             nextt = f"https://t.me/c/{chat_id}/{ids[index+1]}"
-            buttons.append(types.KeyboardButtonUrl("Next ❯", nextt))
+            buttons.append(types.KeyboardButtonUrl("ɴᴇxᴛ ❯", nextt))
             nextt = f'<a href="{nextt}">Next</a>\n'
 
             prev = f"https://t.me/c/{chat_id}/{ids[index-1]}"
-            buttons.append(types.KeyboardButtonUrl("❮ Prev", prev))
+            buttons.append(types.KeyboardButtonUrl("❮ ᴘʀᴇᴠ", prev))
             prev = f'<a href="{prev}">Prev</a>\n'
 
         try:
