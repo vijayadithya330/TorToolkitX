@@ -314,7 +314,7 @@ async def upload_a_file(
         data = "upcancel {} {} {}".format(
             message.chat_id, message.id, user_msg.sender_id
         )
-        buts = [KeyboardButtonCallback("🗑 ᴄᴀɴᴄᴇʟ ᴛᴏ ᴜᴘʟᴏᴀᴅ", data.encode("UTF-8"))]
+        buts = [KeyboardButtonCallback(" 🗑 ᴄᴀɴᴄᴇʟ ᴛᴏ ᴜᴘʟᴏᴀᴅ", data.encode("UTF-8"))]
         msg = await message.reply("**📤__ᴜᴘʟᴏᴀᴅɪɴɢ...__** `\n🗂<b>File Name:</b> {}`".format(file_name), buttons=buts)
 
     else:
