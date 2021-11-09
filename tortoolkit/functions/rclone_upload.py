@@ -65,7 +65,7 @@ async def rclone_upload(
     await task.set_original_message(omsg)
     upload_db.register_upload(omsg.chat_id, omsg.id)
     data = "upcancel {} {} {}".format(omsg.chat_id, omsg.id, omsg.sender_id)
-    buts = [KeyboardButtonCallback("Cancel upload.", data.encode("UTF-8"))]
+    buts = [KeyboardButtonCallback("ᴄᴀɴᴄᴇʟ ᴜᴘʟᴏᴀᴅ", data.encode("UTF-8"))]
 
     msg = await message.reply(
         "<b>Uploading to configured drive.... will be updated soon.",
@@ -124,13 +124,13 @@ async def rclone_upload(
         folder_link = f"https://drive.google.com/folderview?id={gid[0]}"
 
         buttons = []
-        buttons.append([KeyboardButtonUrl("Drive URL", folder_link)])
-        gd_index = get_val("GD_INDEX_URL")
+        buttons.append([KeyboardButtonUrl("ᴅʀɪᴠᴇ ᴜʀʟ", folder_link)])
+        gd_index = get_val("ɢᴅ_ɪɴᴅᴇx_ᴜʀʟ")
         if gd_index:
             index_link = "{}/{}/".format(gd_index.strip("/"), gid[1])
             index_link = requote_uri(index_link)
             torlog.info("index link " + str(index_link))
-            buttons.append([KeyboardButtonUrl("Index URL", index_link)])
+            buttons.append([KeyboardButtonUrl("ɪɴᴅᴇx ᴜʀʟ", index_link)])
 
         ul_size = calculate_size(path)
         transfer[0] += ul_size
@@ -199,7 +199,7 @@ async def rclone_upload(
             index_link = "{}/{}".format(gd_index.strip("/"), gid[1])
             index_link = requote_uri(index_link)
             torlog.info("index link " + str(index_link))
-            buttons.append([KeyboardButtonUrl("Index URL", index_link)])
+            buttons.append([KeyboardButtonUrl("ɪɴᴅᴇx ᴜʀʟ", index_link)])
 
         ul_size = calculate_size(path)
         transfer[0] += ul_size
