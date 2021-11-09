@@ -151,13 +151,13 @@ async def handle_user_settings(e, edit=False, msg="", submenu=None, sender_id=No
             "FORCE_DOCUMENTS", "FORCE_DOCUMENTS", menu, "fdocs", sender_id
         )  #
         # await get_string_variable("RCLONE_CONFIG",menu,"rcloneconfig",session_id)
-        await get_sub_menu("☁️ Open Rclone Menu ☁️", "rclonemenu", sender_id, menu)  #
-        await get_sub_menu("🖼 Open Thumbnail Menu 🖼", "thumbmenu", sender_id, menu)  #
+        await get_sub_menu("☁️ ᴏᴘᴇɴ ʀᴄʟᴏɴᴇ ᴍᴇɴᴜ ☁️", "rclonemenu", sender_id, menu)  #
+        await get_sub_menu("🖼 ᴏᴘᴇɴ ᴛʜᴜᴍʙɴᴀɪʟ ᴍᴇɴᴜ 🖼", "thumbmenu", sender_id, menu)  #
         # thumbnail
         menu.append(
             [
                 KeyboardButtonCallback(
-                    "Close Menu", f"usettings selfdest {sender_id}".encode("UTF-8")
+                    "ᴄʟᴏꜱᴇ ᴍᴇɴᴜ", f"usettings selfdest {sender_id}".encode("UTF-8")
                 )
             ]
         )
@@ -217,11 +217,11 @@ async def handle_user_settings(e, edit=False, msg="", submenu=None, sender_id=No
                             ]
                         )
 
-        await get_sub_menu("«Go Back", "mainmenu", sender_id, menu)
+        await get_sub_menu("«ɢᴏ ʙᴀᴄᴋ", "mainmenu", sender_id, menu)
         menu.append(
             [
                 KeyboardButtonCallback(
-                    "Close Menu", f"usettings selfdest {sender_id}".encode("UTF-8")
+                    "ᴄʟᴏꜱᴇ ᴍᴇɴᴜ", f"usettings selfdest {sender_id}".encode("UTF-8")
                 )
             ]
         )
@@ -241,7 +241,7 @@ async def handle_user_settings(e, edit=False, msg="", submenu=None, sender_id=No
             menu.append(
                 [
                     KeyboardButtonCallback(
-                        "Change Thumbnail",
+                        "ᴄʜᴀɴɢᴇ ᴛʜᴜᴍʙɴᴀɪʟ",
                         f"usettings setthumb {sender_id}".encode("UTF-8"),
                     )
                 ]
@@ -253,11 +253,11 @@ async def handle_user_settings(e, edit=False, msg="", submenu=None, sender_id=No
                 "disablethumb",
                 sender_id,
             )
-            await get_sub_menu("«Go Back", "mainmenu", sender_id, menu)
+            await get_sub_menu("«ɢᴏ ʙᴀᴄᴋ", "mainmenu", sender_id, menu)
             menu.append(
                 [
                     KeyboardButtonCallback(
-                        "Close Menu", f"usettings selfdest {sender_id}".encode("UTF-8")
+                        "ᴄʟᴏꜱᴇ ᴍᴇɴᴜ", f"usettings selfdest {sender_id}".encode("UTF-8")
                     )
                 ]
             )
@@ -271,16 +271,16 @@ async def handle_user_settings(e, edit=False, msg="", submenu=None, sender_id=No
             menu.append(
                 [
                     KeyboardButtonCallback(
-                        "Set Thumbnail.",
+                        "ꜱᴇᴛ ᴛʜᴜᴍʙɴᴀɪʟ.",
                         f"usettings setthumb {sender_id}".encode("UTF-8"),
                     )
                 ]
             )
-            await get_sub_menu("«Go Back", "mainmenu", sender_id, menu)
+            await get_sub_menu("«ɢᴏ ʙᴀᴄᴋ", "mainmenu", sender_id, menu)
             menu.append(
                 [
                     KeyboardButtonCallback(
-                        "Close Menu", f"usettings selfdest {sender_id}".encode("UTF-8")
+                        "ᴄʟᴏꜱᴇ ᴍᴇɴᴜ", f"usettings selfdest {sender_id}".encode("UTF-8")
                     )
                 ]
             )
@@ -510,8 +510,8 @@ async def confirm_buttons(e, val):
     await e.edit(
         f"Confirm the input :- <u>{val}</u>",
         buttons=[
-            KeyboardButtonCallback("Yes", "confirmsetting true"),
-            KeyboardButtonCallback("No", "confirmsetting false"),
+            KeyboardButtonCallback("ʏᴇꜱ", "confirmsetting true"),
+            KeyboardButtonCallback("ɴᴏ", "confirmsetting false"),
         ],
         parse_mode="html",
     )
