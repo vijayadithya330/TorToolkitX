@@ -188,10 +188,10 @@ async def handle_ytdl_command(e: MessageLike):
     msg = await e.get_reply_message()
 
     tsp = time.time()
-    buts = [[KeyboardButtonCallback("To Telegram", data=f"ytdlselect tg {tsp}")]]
+    buts = [[KeyboardButtonCallback("ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ", data=f"ytdlselect tg {tsp}")]]
     if await get_config() is not None:
         buts.append(
-            [KeyboardButtonCallback("To Drive", data=f"ytdlselect drive {tsp}")]
+            [KeyboardButtonCallback("ᴛᴏ ᴅʀɪᴠᴇ", data=f"ytdlselect drive {tsp}")]
         )
 
     msg1 = await e.reply(
@@ -410,10 +410,10 @@ async def handle_ytdl_playlist(e: MessageLike) -> None:
     cmd = f"yt-dlp -i --flat-playlist --dump-single-json {url}"
 
     tsp = time.time()
-    buts = [[KeyboardButtonCallback("To Telegram", data=f"ytdlselect tg {tsp}")]]
+    buts = [[KeyboardButtonCallback("ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ", data=f"ytdlselect tg {tsp}")]]
     if await get_config() is not None:
         buts.append(
-            [KeyboardButtonCallback("To Drive", data=f"ytdlselect drive {tsp}")]
+            [KeyboardButtonCallback("ᴛᴏ ᴅʀɪᴠᴇ", data=f"ytdlselect drive {tsp}")]
         )
 
     msg = await e.reply(
