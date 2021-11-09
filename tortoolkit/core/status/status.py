@@ -268,7 +268,7 @@ class ARTask(Status):
                 parse_mode="html",
                 buttons=[
                     KeyboardButtonCallback(
-                        "🗑Cancel Direct Leech", data=data.encode("UTF-8")
+                        "🗑ᴄᴀɴᴄᴇʟ ᴅɪʀᴇᴄᴛ ʟᴇᴇᴄʜ", data=data.encode("UTF-8")
                     )
                 ],
             )
