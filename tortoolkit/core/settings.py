@@ -356,12 +356,12 @@ async def handle_settings(e, edit=False, msg="", submenu=None, session_id=None):
             "metainfo",
             session_id,
         )
-        await get_string_variable("COMPLETED_STR", menu, "compstr", session_id) 
-        await get_string_variable("REMAINING_STR", menu, "remstr", session_id) 
-        await get_int_variable("TG_UP_LIMIT", menu, "tguplimit", session_id) 
-        await get_int_variable("MAX_TORRENT_SIZE", menu, "maxtorsize", session_id) 
-        await get_int_variable("MAX_YTPLAYLIST_SIZE", menu, "maxytplsize", session_id) 
-        await get_int_variable("EDIT_SLEEP_SECS", menu, "editsleepsec", session_id) 
+        await get_string_variable("COMPLETED_STR", menu, "compstr", session_id)
+        await get_string_variable("REMAINING_STR", menu, "remstr", session_id)
+        await get_int_variable("TG_UP_LIMIT", menu, "tguplimit", session_id)
+        await get_int_variable("MAX_TORRENT_SIZE", menu, "maxtorsize", session_id)
+        await get_int_variable("MAX_YTPLAYLIST_SIZE", menu, "maxytplsize", session_id)
+        await get_int_variable("EDIT_SLEEP_SECS", menu, "editsleepsec", session_id)
         await get_int_variable("STATUS_DEL_TOUT", menu, "statusdeltime", session_id)
         # await get_string_variable("RCLONE_CONFIG",menu,"rcloneconfig",session_id)
         await get_sub_menu("☁ ᴏᴘᴇɴ ʀᴄʟᴏɴᴇ ᴍᴇɴᴜ ☁", "rclonemenu", session_id, menu)
