@@ -256,10 +256,10 @@ async def handle_leech_command(e):
     else:
         rclone = False
         tsp = time.time()
-        buts = [[KeyboardButtonCallback("To Telegram", data=f"leechselect tg {tsp}")]]
+        buts = [[KeyboardButtonCallback("ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ", data=f"leechselect tg {tsp}")]]
         if await get_config() is not None:
             buts.append(
-                [KeyboardButtonCallback("To Drive", data=f"leechselect drive {tsp}")]
+                [KeyboardButtonCallback("ᴛᴏ ᴅʀɪᴠᴇ", data=f"leechselect drive {tsp}")]
             )
         # tsp is used to split the callbacks so that each download has its own callback
         # cuz at any time there are 10-20 callbacks linked for leeching XD
@@ -267,14 +267,14 @@ async def handle_leech_command(e):
         buts.append(
             [
                 KeyboardButtonCallback(
-                    "Upload in a ZIP.[Toggle]", data=f"leechzip toggle {tsp}"
+                    "ᴜᴘʟᴏᴀᴅ ɪɴ ᴀ ᴢɪᴘ.[ᴛᴏɢɢʟᴇ]", data=f"leechzip toggle {tsp}"
                 )
             ]
         )
         buts.append(
             [
                 KeyboardButtonCallback(
-                    "Extract from Archive.[Toggle]", data=f"leechzipex toggleex {tsp}"
+                    "ᴇxᴛʀᴀᴄᴛ ꜰʀᴏᴍ ᴀʀᴄʜɪᴠᴇ.[ᴛᴏɢɢʟᴇ]", data=f"leechzipex toggleex {tsp}"
                 )
             ]
         )
@@ -778,7 +778,7 @@ async def handle_server_command(message):
         await message.reply(
             msg,
             parse_mode="html",
-            buttons=[[KeyboardButtonCallback("Get detailed stats.", "fullserver")]],
+            buttons=[[KeyboardButtonCallback("ɢᴇᴛ ᴅᴇᴛᴀɪʟᴇᴅ ꜱᴛᴀᴛᴜꜱ", "fullserver")]],
         )
 
 
