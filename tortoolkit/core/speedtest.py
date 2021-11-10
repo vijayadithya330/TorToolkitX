@@ -8,7 +8,7 @@ torlog = logging.getLogger(__name__)
 
 
 async def get_speed(message):
-    imspd = await message.reply("`Running speedtest...`")
+    imspd = await message.reply("`𝚁𝚞𝚗𝚗𝚒𝚗𝚐 𝚂𝚙𝚎𝚎𝚍𝚝𝚎𝚜𝚝...`")
     test = Speedtest()
     test.get_best_server()
     test.download()
