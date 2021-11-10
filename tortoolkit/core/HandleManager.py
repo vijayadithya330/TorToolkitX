@@ -280,7 +280,7 @@ async def handle_leech_command(e):
         )
 
         conf_mes = await e.reply(
-            f"First click if you want to zip the contents or extract as an archive (only one will work at a time) then...\n\n<b>Choose where to upload your files:-</b>\nThe files will be uploaded to default destination: <b>{get_val('DEFAULT_TIMEOUT')}</b> after 60 sec of no action by user.</u>\n\n<b>Supported archives to extract:</b>\nzip, 7z, tar, gzip2, iso, wim, rar, tar.gz, tar.bz2",
+            f"𝙵𝚒𝚛𝚜𝚝 𝚌𝚕𝚒𝚌𝚔 𝚒𝚏 𝚢𝚘𝚞 𝚠𝚊𝚗𝚝 𝚝𝚘 𝚣𝚒𝚙 𝚝𝚑𝚎 𝚌𝚘𝚗𝚝𝚎𝚗𝚝𝚜 𝚘𝚛 𝚎𝚡𝚝𝚛𝚊𝚌𝚝 𝚊𝚜 𝚊𝚗 𝚊𝚛𝚌𝚑𝚒𝚟𝚎 (𝚘𝚗𝚕𝚢 𝚘𝚗𝚎 𝚠𝚒𝚕𝚕 𝚠𝚘𝚛𝚔 𝚊𝚝 𝚊 𝚝𝚒𝚖𝚎) 𝚝𝚑𝚎𝚗...\n\n<b>𝙲𝚑𝚘𝚘𝚜𝚎 𝚠𝚑𝚎𝚛𝚎 𝚝𝚘 𝚞𝚙𝚕𝚘𝚊𝚍 𝚢𝚘𝚞𝚛 𝚏𝚒𝚕𝚎𝚜:-</b>\n𝚃𝚑𝚎 𝚏𝚒𝚕𝚎𝚜 𝚠𝚒𝚕𝚕 𝚋𝚎 𝚞𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝚝𝚘 𝚍𝚎𝚏𝚊𝚞𝚕𝚝 𝚍𝚎𝚜𝚝𝚒𝚗𝚊𝚝𝚒𝚘𝚗: <b>{get_val('DEFAULT_TIMEOUT')}</b> 𝚊𝚏𝚝𝚎𝚛 𝟼𝟶 𝚜𝚎𝚌 𝚘𝚏 𝚗𝚘 𝚊𝚌𝚝𝚒𝚘𝚗 𝚋𝚢 𝚞𝚜𝚎𝚛.</u>\n\n<b>𝚂𝚞𝚙𝚙𝚘𝚛𝚝𝚎𝚍 𝚊𝚛𝚌𝚑𝚒𝚟𝚎𝚜 𝚝𝚘 𝚎𝚡𝚝𝚛𝚊𝚌𝚝:</b>\nzip, 7z, tar, gzip2, iso, wim, rar, tar.gz, tar.bz2",
             parse_mode="html",
             buttons=buts,
         )
@@ -395,20 +395,20 @@ async def get_leech_choice_callback(e, o_sender, lis, ts):
         # encompasses the None situation too
         print("data ", lis)
         if lis[1] is True:
-            await e.answer("Will Not be zipped", alert=True)
+            await e.answer("𝚆𝚒𝚕𝚕 𝙽𝚘𝚝 𝚋𝚎 𝚣𝚒𝚙𝚙𝚎𝚍", alert=True)
             lis[1] = False
         else:
-            await e.answer("Will be zipped", alert=True)
+            await e.answer("𝚆𝚒𝚕𝚕 𝚋𝚎 𝚣𝚒𝚙𝚙𝚎𝚍", alert=True)
             lis[1] = True
     elif data[1] == "toggleex":
         print("exdata ", lis)
         # encompasses the None situation too
         if lis[1] is True:
-            await e.answer("It will not be extracted.", alert=True)
+            await e.answer("𝙸𝚝 𝚠𝚒𝚕𝚕 𝚗𝚘𝚝 𝚋𝚎 𝚎𝚡𝚝𝚛𝚊𝚌𝚝𝚎𝚍.", alert=True)
             lis[1] = False
         else:
             await e.answer(
-                "If it is a Archive it will be extracted. Further in you can set password to extract the ZIP.",
+                "𝙸𝚏 𝚒𝚝 𝚒𝚜 𝚊 𝙰𝚛𝚌𝚑𝚒𝚟𝚎 𝚒𝚝 𝚠𝚒𝚕𝚕 𝚋𝚎 𝚎𝚡𝚝𝚛𝚊𝚌𝚝𝚎𝚍. 𝙵𝚞𝚛𝚝𝚑𝚎𝚛 𝚒𝚗 𝚢𝚘𝚞 𝚌𝚊𝚗 𝚜𝚎𝚝 𝚙𝚊𝚜𝚜𝚠𝚘𝚛𝚍 𝚝𝚘 𝚎𝚡𝚝𝚛𝚊𝚌𝚝 𝚝𝚑𝚎 𝚉𝙸𝙿.",
                 alert=True,
             )
             lis[1] = True
@@ -477,7 +477,7 @@ async def handle_settings_cb(e):
     if await is_admin(e.client, e.sender_id, e.chat_id):
         await handle_setting_callback(e)
     else:
-        await e.answer("⚠️ WARN ⚠️ Dont Touch Owner Settings.", alert=True)
+        await e.answer("⚠️ 𝚆𝙰𝚁𝙽 ⚠️ 𝙳𝚘𝚗𝚝 𝚃𝚘𝚞𝚌𝚑 𝙾𝚠𝚗𝚎𝚛 𝚂𝚎𝚝𝚝𝚒𝚗𝚐𝚜.", alert=True)
 
 
 async def handle_upcancel_cb(e):
@@ -489,12 +489,12 @@ async def handle_upcancel_cb(e):
 
     if str(e.sender_id) == data[3]:
         db.cancel_download(data[1], data[2])
-        await e.answer("Upload has been canceled ;)", alert=True)
+        await e.answer("𝚄𝚙𝚕𝚘𝚊𝚍 𝚑𝚊𝚜 𝚋𝚎𝚎𝚗 𝚌𝚊𝚗𝚌𝚎𝚕𝚎𝚍 ;)", alert=True)
     elif e.sender_id in get_val("ALD_USR"):
         db.cancel_download(data[1], data[2])
         await e.answer("UPLOAD CANCELED IN ADMIN MODE XD ;)", alert=True)
     else:
-        await e.answer("Can't Cancel others upload 😡", alert=True)
+        await e.answer("𝙲𝚊𝚗'𝚝 𝙲𝚊𝚗𝚌𝚎𝚕 𝚘𝚝𝚑𝚎𝚛𝚜 𝚞𝚙𝚕𝚘𝚊𝚍 😡", alert=True)
 
 
 async def callback_handler_canc(e):
@@ -529,7 +529,7 @@ async def callback_handler_canc(e):
         torlog.info(f"Hashid :- {hashid}")
 
         await cancel_torrent(hashid, is_aria, is_mega)
-        await e.answer("Leech has been canceled ;)", alert=True)
+        await e.answer("𝙻𝚎𝚎𝚌𝚑 𝚑𝚊𝚜 𝚋𝚎𝚎𝚗 𝚌𝚊𝚗𝚌𝚎𝚕𝚎𝚍 ;)", alert=True)
     elif e.sender_id in get_val("ALD_USR"):
         hashid = data[1]
         hashid = hashid.strip("'")
@@ -539,7 +539,7 @@ async def callback_handler_canc(e):
         await cancel_torrent(hashid, is_aria, is_mega)
         await e.answer("Leech has been canceled in ADMIN MODE XD ;)", alert=True)
     else:
-        await e.answer("Can't Cancel others leech 😡", alert=True)
+        await e.answer("𝙲𝚊𝚗'𝚝 𝙲𝚊𝚗𝚌𝚎𝚕 𝚘𝚝𝚑𝚎𝚛𝚜 𝙻𝚎𝚎𝚌𝚑 😡", alert=True)
 
 
 async def handle_exec_message_f(e):
@@ -558,10 +558,10 @@ async def handle_exec_message_f(e):
         stdout, stderr = await process.communicate()
         e = stderr.decode()
         if not e:
-            e = "No Error"
+            e = "𝙽𝚘 𝙴𝚛𝚛𝚘𝚛"
         o = stdout.decode()
         if not o:
-            o = "No Output"
+            o = "𝙽𝚘 𝙾𝚞𝚝𝚙𝚞𝚝"
         else:
             _o = o.split("\n")
             o = "`\n".join(_o)
@@ -592,12 +592,12 @@ async def handle_pincode_cb(e):
         db = tor_db
         passw = db.get_password(data[1])
         if isinstance(passw, bool):
-            await e.answer("torrent expired download has been started now.")
+            await e.answer("𝚝𝚘𝚛𝚛𝚎𝚗𝚝 𝚎𝚡𝚙𝚒𝚛𝚎𝚍 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚑𝚊𝚜 𝚋𝚎𝚎𝚗 𝚜𝚝𝚊𝚛𝚝𝚎𝚍 𝚗𝚘𝚠.")
         else:
-            await e.answer(f"Your Pincode is {passw}", alert=True)
+            await e.answer(f"𝚈𝚘𝚞𝚛 𝙿𝚒𝚗𝚌𝚘𝚍𝚎 𝚒𝚜 {passw}", alert=True)
 
     else:
-        await e.answer("It's not your torrent.", alert=True)
+        await e.answer("𝙸𝚝'𝚜 𝚗𝚘𝚝 𝚢𝚘𝚞𝚛 𝚝𝚘𝚛𝚛𝚎𝚗𝚝.", alert=True)
 
 
 async def upload_document_f(message):
@@ -636,10 +636,10 @@ async def set_password_zip(message):
         print(passdata[0])
         if str(message.sender_id) == passdata[0]:
             message.client.dl_passwords[int(data[1])][1] = data[2]
-            await message.reply(f"Password updated successfully.")
+            await message.reply(f"𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍 𝚞𝚙𝚍𝚊𝚝𝚎𝚍 𝚜𝚞𝚌𝚌𝚎𝚜𝚜𝚏𝚞𝚕𝚕𝚢.")
         else:
             await message.reply(
-                f"Cannot update the password this is not your download."
+                f"𝙲𝚊𝚗𝚗𝚘𝚝 𝚞𝚙𝚍𝚊𝚝𝚎 𝚝𝚑𝚎 𝚙𝚊𝚜𝚜𝚠𝚘𝚛𝚍 𝚝𝚑𝚒𝚜 𝚒𝚜 𝚗𝚘𝚝 𝚢𝚘𝚞𝚛 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍."
             )
 
 
@@ -850,13 +850,13 @@ async def about_me(message):
 async def set_thumb_cmd(e):
     thumb_msg = await e.get_reply_message()
     if thumb_msg is None:
-        await e.reply("Reply to a photo or photo as a document.")
+        await e.reply("𝚁𝚎𝚙𝚕𝚢 𝚝𝚘 𝚊 𝚙𝚑𝚘𝚝𝚘 𝚘𝚛 𝚙𝚑𝚘𝚝𝚘 𝚊𝚜 𝚊 𝚍𝚘𝚌𝚞𝚖𝚎𝚗𝚝.")
         return
 
     if thumb_msg.document is not None or thumb_msg.photo is not None:
         value = await thumb_msg.download_media()
     else:
-        await e.reply("Reply to a photo or photo as a document.")
+        await e.reply("𝚁𝚎𝚙𝚕𝚢 𝚝𝚘 𝚊 𝚙𝚑𝚘𝚝𝚘 𝚘𝚛 𝚙𝚑𝚘𝚝𝚘 𝚊𝚜 𝚊 𝚍𝚘𝚌𝚞𝚖𝚎𝚗𝚝.")
         return
 
     try:
@@ -871,7 +871,7 @@ async def set_thumb_cmd(e):
         os.remove(value)
     except Exception:
         torlog.exception("Set Thumb")
-        await e.reply("Errored in setting thumbnail.")
+        await e.reply("𝙴𝚛𝚛𝚘𝚛𝚎𝚍 𝚒𝚗 𝚜𝚎𝚝𝚝𝚒𝚗𝚐 𝚝𝚑𝚞𝚖𝚋𝚗𝚊𝚒𝚕.")
         return
 
     try:
@@ -881,14 +881,14 @@ async def set_thumb_cmd(e):
 
     user_db.set_var("DISABLE_THUMBNAIL", False, str(e.sender_id))
     await e.reply(
-        "Thumbnail set. try using /usettings to get more control."
+        "𝚃𝚑𝚞𝚖𝚋𝚗𝚊𝚒𝚕 𝚜𝚎𝚝. 𝚝𝚛𝚢 𝚞𝚜𝚒𝚗𝚐 /𝚞𝚜𝚎𝚝𝚝𝚒𝚗𝚐𝚜 𝚝𝚘 𝚐𝚎𝚝 𝚖𝚘𝚛𝚎 𝚌𝚘𝚗𝚝𝚛𝚘𝚕."
     )
 
 
 async def clear_thumb_cmd(e):
     user_db.set_var("DISABLE_THUMBNAIL", True, str(e.sender_id))
     await e.reply(
-        "Thumbnail disabled. Try using /usettings to get more control."
+        "𝚃𝚑𝚞𝚖𝚋𝚗𝚊𝚒𝚕 𝚍𝚒𝚜𝚊𝚋𝚕𝚎𝚍. 𝚃𝚛𝚢 𝚞𝚜𝚒𝚗𝚐 /𝚞𝚜𝚎𝚝𝚝𝚒𝚗𝚐𝚜 𝚝𝚘 𝚐𝚎𝚝 𝚖𝚘𝚛𝚎 𝚌𝚘𝚗𝚝𝚛𝚘𝚕."
     )
 
 
@@ -933,7 +933,7 @@ async def booted(client):
     chats = get_val("ALD_USR")
     for i in chats:
         try:
-            await client.send_message(i, "Guys I Am Ready To Downloading...")
+            await client.send_message(i, "𝙶𝚞𝚢𝚜 𝙸 𝙰𝚖 𝚁𝚎𝚊𝚍𝚢 𝚃𝚘 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐...")
         except Exception:
             torlog.info(f"Not found the entity {i}")
 
