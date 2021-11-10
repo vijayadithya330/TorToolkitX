@@ -268,20 +268,20 @@ async def update_progress(
             if is_meta and (time.time() - meta_time) > get_val("TOR_MAX_TOUT"):
 
                 await message.edit(
-                    "Torrent <code>{}</code> is DEAD. [Metadata Failed]".format(
+                    "𝚃𝚘𝚛𝚛𝚎𝚗𝚝 <code>{}</code> 𝚒𝚜 𝙳𝙴𝙰𝙳. [𝙼𝚎𝚝𝚊𝚍𝚊𝚝𝚊 𝙵𝚊𝚒𝚕𝚎𝚍]".format(
                         tor_info.name
                     ),
                     buttons=None,
                     parse_mode="html",
                 )
                 torlog.error(
-                    "An torrent has no seeds clearing that torrent now. Torrent:- {} - {}".format(
+                    "𝙰𝚗 𝚝𝚘𝚛𝚛𝚎𝚗𝚝 𝚑𝚊𝚜 𝚎𝚛𝚛𝚘𝚛 𝚌𝚕𝚎𝚊𝚛𝚒𝚗𝚐 𝚝𝚑𝚊𝚝 𝚝𝚘𝚛𝚛𝚎𝚗𝚝 𝚗𝚘𝚠. 𝚃𝚘𝚛𝚛𝚎𝚗𝚝:- {} - {}".format(
                         tor_info.hash, tor_info.name
                     )
                 )
                 await delete_this(tor_info.hash)
                 await task.set_inactive(
-                    "Torrent <code>{}</code> is DEAD. [Metadata Failed]".format(
+                    "𝚃𝚘𝚛𝚛𝚎𝚗𝚝 <code>{}</code> 𝚒𝚜 𝙳𝙴𝙰𝙳. [𝙼𝚎𝚝𝚊𝚍𝚊𝚝𝚊 𝙵𝚊𝚒𝚕𝚎𝚍]".format(
                         tor_info.name
                     )
                 )
@@ -292,12 +292,12 @@ async def update_progress(
                 if tor_info.state == "error":
 
                     await message.edit(
-                        "Torrent <code>{}</code> errored out.".format(tor_info.name),
+                        "𝚃𝚘𝚛𝚛𝚎𝚗𝚝 <code>{}</code> 𝚎𝚛𝚛𝚘𝚛𝚎𝚍 𝚘𝚞𝚝.".format(tor_info.name),
                         buttons=None,
                         parse_mode="html",
                     )
                     torlog.error(
-                        "An torrent has error clearing that torrent now. Torrent:- {} - {}".format(
+                        "𝙰𝚗 𝚝𝚘𝚛𝚛𝚎𝚗𝚝 𝚑𝚊𝚜 𝚎𝚛𝚛𝚘𝚛 𝚌𝚕𝚎𝚊𝚛𝚒𝚗𝚐 𝚝𝚑𝚊𝚝 𝚝𝚘𝚛𝚛𝚎𝚗𝚝 𝚗𝚘𝚠. 𝚃𝚘𝚛𝚛𝚎𝚗𝚝:- {} - {}".format(
                             tor_info.hash, tor_info.name
                         )
                     )
@@ -329,16 +329,16 @@ async def update_progress(
                         )
                     except:
                         await message.edit(
-                            "Download path location failed", buttons=None
+                            "𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚙𝚊𝚝𝚑 𝚕𝚘𝚌𝚊𝚝𝚒𝚘𝚗 𝚏𝚊𝚒𝚕𝚎𝚍", buttons=None
                         )
-                        await task.set_inactive("Download path location failed")
+                        await task.set_inactive("𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚙𝚊𝚝𝚑 𝚕𝚘𝚌𝚊𝚝𝚒𝚘𝚗 𝚏𝚊𝚒𝚕𝚎𝚍")
                         await delete_this(tor_info.hash)
                         return None
 
                     await task.set_path(savepath)
                     await task.set_done()
                     await message.edit(
-                        "**Download completed:** `{}`\n\n**Size:** `{}`\n\n**To path:** `{}`".format(
+                        "📥**__ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴏᴍᴘʟᴇᴛᴇ:__** \n\n<b>🗂ꜰɪʟᴇ ɴᴀᴍᴇ:</b> `{}`\n\n**💽ꜰɪʟᴇ ꜱɪᴢᴇ:** `{}`\n\n**📍ᴛᴏ ᴘᴀᴛʜ:** `{}`".format(
                             tor_info.name,
                             human_readable_bytes(tor_info.total_size),
                             tor_info.save_path,
@@ -509,7 +509,7 @@ async def register_torrent(entity, message, user_msg=None, magnet=False, file=Fa
             return False
         torlog.info(torrent)
         if torrent.progress == 1 and torrent.completion_on > 1:
-            await message.edit("The provided torrent was already completly downloaded.")
+            await message.edit("𝚃𝚑𝚎 𝚙𝚛𝚘𝚟𝚒𝚍𝚎𝚍 𝚝𝚘𝚛𝚛𝚎𝚗𝚝 𝚠𝚊𝚜 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚍.")
             return True
         else:
 
@@ -525,17 +525,17 @@ async def register_torrent(entity, message, user_msg=None, magnet=False, file=Fa
             urll = f"{base}/tortk/files/{torrent.hash}"
 
             message = await message.edit(
-                "Download will be automatically started after 180s of no action.",
+                "𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚠𝚒𝚕𝚕 𝚋𝚎 𝚊𝚞𝚝𝚘𝚖𝚊𝚝𝚒𝚌𝚊𝚕𝚕𝚢 𝚜𝚝𝚊𝚛𝚝𝚎𝚍 𝚊𝚏𝚝𝚎𝚛 𝟷𝟾𝟶𝚜 𝚘𝚏 𝚗𝚘 𝚊𝚌𝚝𝚒𝚘𝚗.",
                 buttons=[
                     [
-                        KeyboardButtonUrl("Choose File from link", urll),
+                        KeyboardButtonUrl("ᴄʜᴏᴏꜱᴇ ꜰɪʟᴇ ꜰʀᴏᴍ ʟɪɴᴋ", urll),
                         KeyboardButtonCallback(
-                            "Get Pincode", data=pincodetxt.encode("UTF-8")
+                            "ɢᴇᴛ ᴘɪɴᴄᴏᴅᴇ", data=pincodetxt.encode("UTF-8")
                         ),
                     ],
                     [
                         KeyboardButtonCallback(
-                            "Done Selecting Files.",
+                            "ᴅᴏɴᴇ ꜱᴇʟᴇᴄᴛɪɴɢ ꜰɪʟᴇꜱ",
                             data=f"doneselection {omess.sender_id} {omess.id}".encode(
                                 "UTF-8"
                             ),
@@ -548,7 +548,7 @@ async def register_torrent(entity, message, user_msg=None, magnet=False, file=Fa
 
             message = await message.edit(
                 buttons=[
-                    KeyboardButtonCallback("Cancel Leech", data=data.encode("UTF-8"))
+                    KeyboardButtonCallback("🗑 ᴄᴀɴᴄᴇʟ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ", data=data.encode("UTF-8"))
                 ]
             )
 
@@ -564,7 +564,7 @@ async def register_torrent(entity, message, user_msg=None, magnet=False, file=Fa
         torlog.info(torrent)
 
         if torrent.progress == 1:
-            await message.edit("The provided torrent was already downloaded.")
+            await message.edit("𝚃𝚑𝚎 𝚙𝚛𝚘𝚟𝚒𝚍𝚎𝚍 𝚝𝚘𝚛𝚛𝚎𝚗𝚝 𝚠𝚊𝚜 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚍.")
             return True
         else:
             pincode = randint(1000, 9999)
@@ -582,14 +582,14 @@ async def register_torrent(entity, message, user_msg=None, magnet=False, file=Fa
             message = await message.edit(
                 buttons=[
                     [
-                        KeyboardButtonUrl("Choose File from link", urll),
+                        KeyboardButtonUrl("ᴄʜᴏᴏꜱᴇ ꜰɪʟᴇ ꜰʀᴏᴍ ʟɪɴᴋ", urll),
                         KeyboardButtonCallback(
-                            "Get Pincode", data=pincodetxt.encode("UTF-8")
+                            "ɢᴇᴛ ᴘɪɴᴄᴏᴅᴇ", data=pincodetxt.encode("UTF-8")
                         ),
                     ],
                     [
                         KeyboardButtonCallback(
-                            "Done Selecting Files.",
+                            "ᴅᴏɴᴇ ꜱᴇʟᴇᴄᴛɪɴɢ ꜰɪʟᴇꜱ",
                             data=f"doneselection {omess.sender_id} {omess.id}".encode(
                                 "UTF-8"
                             ),
@@ -602,7 +602,7 @@ async def register_torrent(entity, message, user_msg=None, magnet=False, file=Fa
 
             message = await message.edit(
                 buttons=[
-                    KeyboardButtonCallback("Cancel Leech", data=data.encode("UTF-8"))
+                    KeyboardButtonCallback("🗑 ᴄᴀɴᴄᴇʟ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ", data=data.encode("UTF-8"))
                 ]
             )
 
@@ -651,7 +651,7 @@ async def get_confirm_callback(e, lis):
         return
     if str(lis[2]) != msgid:
         return
-    await e.answer("Starting the download with the selected files.")
+    await e.answer("𝚂𝚝𝚊𝚛𝚝𝚒𝚗𝚐 𝚝𝚑𝚎 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚠𝚒𝚝𝚑 𝚝𝚑𝚎 𝚜𝚎𝚕𝚎𝚌𝚝𝚎𝚍 𝚏𝚒𝚕𝚎𝚜.")
     lis[0] = True
     raise events.StopPropagation()
 
