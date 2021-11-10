@@ -75,7 +75,7 @@ async def check_link(msg, rclone=False, is_zip=False, extract=False, prev_msg=No
     msg = await msg.get_reply_message()
 
     if extract:
-        mess = f"You chose to extract the archive <a href='tg://user?id={omess.sender_id}'>ENTER PASSWORD IF ANY.</a>\n Use <code>/setpass {omess.id} password-here</code>"
+        mess = f"𝚈𝚘𝚞 𝚌𝚑𝚘𝚜𝚎 𝚝𝚘 𝚎𝚡𝚝𝚛𝚊𝚌𝚝 𝚝𝚑𝚎 𝚊𝚛𝚌𝚑𝚒𝚟𝚎 <a href='tg://user?id={omess.sender_id}'>𝙴𝙽𝚃𝙴𝚁 𝙿𝙰𝚂𝚂𝚆𝙾𝚁𝙳 𝙸𝙵 𝙰𝙽𝚈.</a>\n Use <code>/setpass {omess.id} password-here</code>"
         omess.client.dl_passwords[omess.id] = [str(omess.sender_id), None]
         await omess.reply(mess, parse_mode="html")
 
@@ -90,11 +90,11 @@ async def check_link(msg, rclone=False, is_zip=False, extract=False, prev_msg=No
 
         if name is None:
             await omess.reply(
-                "😡Fuck! This is not a torrent file to leech from. Send <code>.torrent</code> file",
+                "😡𝙵𝚞𝚌𝚔! 𝚃𝚑𝚒𝚜 𝚒𝚜 𝚗𝚘𝚝 𝚊 𝚝𝚘𝚛𝚛𝚎𝚗𝚝 𝚏𝚒𝚕𝚎 𝚝𝚘 𝚕𝚎𝚎𝚌𝚑 𝚏𝚛𝚘𝚖. 𝚂𝚎𝚗𝚍 <code>.torrent</code> 𝚏𝚒𝚕𝚎",
                 parse_mode="html",
             )
         elif name.lower().endswith(".torrent"):
-            rmess = await omess.reply("🤫Downloading your torrent file.")
+            rmess = await omess.reply("🤫𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚢𝚘𝚞𝚛 𝚝𝚘𝚛𝚛𝚎𝚗𝚝 𝚏𝚒𝚕𝚎")
 
             # not worring about the download location now
             # TODO do something to de register the torrents
@@ -136,13 +136,13 @@ async def check_link(msg, rclone=False, is_zip=False, extract=False, prev_msg=No
                         )
                     except:
                         rdict = dict()
-                        torlog.exception("Exception in torrent file")
+                        torlog.exception("𝙴𝚡𝚌𝚎𝚙𝚝𝚒𝚘𝚗 𝚒𝚗 𝚝𝚘𝚛𝚛𝚎𝚗𝚝 𝚏𝚒𝚕𝚎")
 
                     await ul_task.set_inactive()
                     await print_files(
                         omess, rdict, dl_task.hash, path=dl_path, size=ul_size
                     )
-                    torlog.info("Here are the fiels uploaded {}".format(rdict))
+                    torlog.info("𝙷𝚎𝚛𝚎 𝚊𝚛𝚎 𝚝𝚑𝚎 𝚏𝚒𝚎𝚕𝚜 𝚞𝚙𝚕𝚘𝚊𝚍𝚎𝚍 {}".format(rdict))
                     await QBittorrentWrap.delete_this(dl_task.hash)
                 else:
                     res = await rclone_driver(dl_path, rmess, omess, dl_task)
@@ -161,7 +161,7 @@ async def check_link(msg, rclone=False, is_zip=False, extract=False, prev_msg=No
             return dl_path
         else:
             await omess.reply(
-                "😡Fuck! This is not a torrent file to leech from. Send <code>.torrent</code> file",
+                "😡𝙵𝚞𝚌𝚔! 𝚃𝚑𝚒𝚜 𝚒𝚜 𝚗𝚘𝚝 𝚊 𝚝𝚘𝚛𝚛𝚎𝚗𝚝 𝚏𝚒𝚕𝚎 𝚝𝚘 𝚕𝚎𝚎𝚌𝚑 𝚏𝚛𝚘𝚖. 𝚂𝚎𝚗𝚍 <code>.torrent</code> 𝚏𝚒𝚕𝚎",
                 parse_mode="html",
             )
 
@@ -234,7 +234,7 @@ async def check_link(msg, rclone=False, is_zip=False, extract=False, prev_msg=No
             await clear_stuff(dl_path)
 
         elif msg.raw_text.lower().endswith(".torrent"):
-            rmess = await omess.reply("🤫Downloading Your The Torrent File.")
+            rmess = await omess.reply("🤫𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚢𝚘𝚞𝚛 𝚝𝚘𝚛𝚛𝚎𝚗𝚝 𝚏𝚒𝚕𝚎")
 
             # TODO do something to de register the torrents - done
             path = ""
@@ -287,7 +287,7 @@ async def check_link(msg, rclone=False, is_zip=False, extract=False, prev_msg=No
                         )
                     except:
                         rdict = dict()
-                        torlog.exception("Exception in torrent link")
+                        torlog.exception("𝙴𝚡𝚌𝚎𝚙𝚝𝚒𝚘𝚗 𝚒𝚗 𝚝𝚘𝚛𝚛𝚎𝚗𝚝 𝚕𝚒𝚗𝚔")
 
                     await ul_task.set_inactive()
                     await print_files(
@@ -457,23 +457,23 @@ async def handle_zips(path, is_zip, rmess, split=True):
     if is_zip:
         try:
             await rmess.edit(
-                rmess.text + "\nStarting to Zip the contents. Please wait."
+                rmess.text + "\n𝚂𝚝𝚊𝚛𝚝𝚒𝚗𝚐 𝚝𝚘 𝚉𝚒𝚙 𝚝𝚑𝚎 𝚌𝚘𝚗𝚝𝚎𝚗𝚝𝚜. 𝙿𝚕𝚎𝚊𝚜𝚎 𝚠𝚊𝚒𝚝."
             )
             zip_path = await add_to_zip(path, get_val("TG_UP_LIMIT"), split)
 
             if zip_path is None:
-                await rmess.edit(rmess.text + "\nZip failed. Falback to normal.")
+                await rmess.edit(rmess.text + "\n𝚉𝚒𝚙 𝚏𝚊𝚒𝚕𝚎𝚍. 𝙵𝚊𝚕𝚋𝚊𝚌𝚔 𝚝𝚘 𝚗𝚘𝚛𝚖𝚊𝚕.")
                 return False
 
             if os.path.isdir(path):
                 shutil.rmtree(path)
             if os.path.isfile(path):
                 os.remove(path)
-            await rmess.edit(rmess.text + "\n\n**Zipping done. Now uploading.**")
+            await rmess.edit(rmess.text + "\n\n**𝚉𝚒𝚙𝚙𝚒𝚗𝚐 𝚍𝚘𝚗𝚎. 𝙽𝚘𝚠 𝚞𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐**")
             await clear_stuff(path)
             return zip_path
         except:
-            await rmess.edit(rmess.text + "\nZip failed. Falback to normal.")
+            await rmess.edit(rmess.text + "\n𝚉𝚒𝚙 𝚏𝚊𝚒𝚕𝚎𝚍. 𝙵𝚊𝚕𝚋𝚊𝚌𝚔 𝚝𝚘 𝚗𝚘𝚛𝚖𝚊𝚕.")
             return False
     else:
         return path
@@ -486,7 +486,7 @@ async def handle_ext_zip(path, rmess, omess):
     if password is not None:
         password = password[1]
     start = time.time()
-    await rmess.edit(f"{rmess.text}\n\n**Trying to Extract the archive..**")
+    await rmess.edit(f"{rmess.text}\n\n**𝚃𝚛𝚢𝚒𝚗𝚐 𝚝𝚘 𝙴𝚡𝚝𝚛𝚊𝚌𝚝 𝚝𝚑𝚎 𝚊𝚛𝚌𝚑𝚒𝚟𝚎...**")
     wrong_pwd = False
 
     while True:
@@ -495,7 +495,7 @@ async def handle_ext_zip(path, rmess, omess):
         else:
             if (time.time() - start) > 1200:
                 await rmess.edit(
-                    f"{rmess.text}\n**Extract failed as no correct password was provided uploading as it is.**"
+                    f"{rmess.text}\n**𝙴𝚡𝚝𝚛𝚊𝚌𝚝 𝚏𝚊𝚒𝚕𝚎𝚍 𝚊𝚜 𝚗𝚘 𝚌𝚘𝚛𝚛𝚎𝚌𝚝 𝚙𝚊𝚜𝚜𝚠𝚘𝚛𝚍 𝚠𝚊𝚜 𝚙𝚛𝚘𝚟𝚒𝚍𝚎𝚍 𝚞𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚊𝚜 𝚒𝚝 𝚒𝚜.**"
                 )
                 return False
 
