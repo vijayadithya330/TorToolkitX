@@ -94,16 +94,16 @@ class QBTask(Status):
     async def get_state(self):
         # stalled
         if self._torrent.state == "stalledDL":
-            return "Torrent <code>{}</code> is stalled(waiting for connection) temporarily.".format(
+            return "𝚃𝚘𝚛𝚛𝚎𝚗𝚝 <code>{}</code> 𝙸𝚜 𝚂𝚝𝚊𝚕𝚕𝚎𝚍 (𝚆𝚊𝚒𝚝𝚒𝚗𝚐 𝙵𝚘𝚛 𝙲𝚘𝚗𝚗𝚎𝚌𝚝𝚒𝚘𝚗) 𝚃𝚎𝚖𝚙𝚘𝚛𝚊𝚛𝚒𝚕𝚢.".format(
                 self._torrent.name
             )
         # meta stage
         elif self._torrent.state == "metaDL":
-            return "Getting metadata for {} - {}".format(
+            return "𝙶𝚎𝚝𝚝𝚒𝚗𝚐 𝙼𝚎𝚝𝚊𝚍𝚊𝚝𝚊 𝙵𝚘𝚛 {} - {}".format(
                 self._torrent.name, datetime.now().strftime("%H:%M:%S")
             )
         elif (
-            self._torrent.state == "Downloading..."
+            self._torrent.state == "𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐..."
             or self._torrent.state.lower().endswith("dl")
         ):
             # kept for past ref
@@ -138,7 +138,7 @@ class QBTask(Status):
         except FloodWaitError as e:
             torlog.error("{}".format(e))
         except Exception as e:
-            torlog.info("Not expected {}".format(e))
+            torlog.info("𝙽𝚘𝚝 𝙴𝚡𝚙𝚎𝚌𝚝𝚎𝚍 {}".format(e))
 
     async def set_done(self):
         self._done = True
@@ -162,7 +162,7 @@ class QBTask(Status):
         return self._active
 
     def progress_bar(self, percentage):
-        """Returns a progress bar for download"""
+        """𝚁𝚎𝚝𝚞𝚛𝚗𝚜 𝙰 𝙿𝚛𝚘𝚐𝚛𝚎𝚜𝚜 𝙱𝚊𝚛 𝙵𝚘𝚛 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍"""
         # percentage is on the scale of 0-1
         comp = get_val("COMPLETED_STR")
         ncomp = get_val("REMAINING_STR")
@@ -278,7 +278,7 @@ class ARTask(Status):
         except FloodWaitError as e:
             torlog.error("{}".format(e))
         except Exception as e:
-            torlog.info("Not expected {}".format(e))
+            torlog.info("𝙽𝚘𝚝 𝙴𝚡𝚙𝚎𝚌𝚝𝚎𝚍 {}".format(e))
 
     async def set_done(self):
         self._done = True
@@ -305,7 +305,7 @@ class ARTask(Status):
         return self._path
 
     def progress_bar(self, percentage):
-        """Returns a progress bar for download"""
+        """𝚁𝚎𝚝𝚞𝚛𝚗𝚜 𝙰 𝙿𝚛𝚘𝚐𝚛𝚎𝚜𝚜 𝙱𝚊𝚛 𝙵𝚘𝚛 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍"""
         # percentage is on the scale of 0-1
         comp = get_val("COMPLETED_STR")
         ncomp = get_val("REMAINING_STR")
@@ -418,7 +418,7 @@ class MegaDl(Status):
         except FloodWaitError as e:
             torlog.error("{}".format(e))
         except Exception as e:
-            torlog.info("Not expected {}".format(e))
+            torlog.info("𝙽𝚘𝚝 𝙴𝚡𝚙𝚎𝚌𝚝𝚎𝚍 {}".format(e))
 
     async def set_done(self):
         self._done = True
@@ -445,7 +445,7 @@ class MegaDl(Status):
         return self._path
 
     def progress_bar(self, percentage):
-        """Returns a progress bar for download"""
+        """𝚁𝚎𝚝𝚞𝚛𝚗𝚜 𝙰 𝙿𝚛𝚘𝚐𝚛𝚎𝚜𝚜 𝙱𝚊𝚛 𝙵𝚘𝚛 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍"""
         # percentage is on the scale of 0-1
         comp = get_val("COMPLETED_STR")
         ncomp = get_val("REMAINING_STR")
