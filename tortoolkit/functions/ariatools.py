@@ -229,7 +229,7 @@ async def check_progress_for_dl(
             )
         else:
             await event.remove(
-                f"**𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚌𝚘𝚖𝚙𝚕𝚎𝚝𝚎𝚍** {file.name}\n\n**ꜰɪʟᴇ ꜱɪᴢᴇ:** {file.total_length_string()}",
+                f"**ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴏᴍᴘʟᴇᴛᴇ:** \n\n**ꜰɪʟᴇ ɴᴀᴍᴇ:** {file.name}\n\n**ꜰɪʟᴇ ꜱɪᴢᴇ:** {file.total_length_string()}",
                 buttons=None,
             )
             return True, "**<i>🤩ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴏᴍᴘʟᴇᴛᴇ!</i>**"
