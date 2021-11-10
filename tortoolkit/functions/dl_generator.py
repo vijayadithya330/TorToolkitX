@@ -32,7 +32,7 @@ async def generate_directs(url):
             ourl = info.get("href")
             return ourl
         except:
-            return "**ERROR:** Cant't download, double check your mediafire link!"
+            return "**ᴇʀʀᴏʀ:** 𝙲𝚊𝚗𝚝'𝚝 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍, 𝚍𝚘𝚞𝚋𝚕𝚎 𝚌𝚑𝚎𝚌𝚔 𝚢𝚘𝚞𝚛 𝚖𝚎𝚍𝚒𝚊𝚏𝚒𝚛𝚎 𝚕𝚒𝚗𝚔!"
 
     # disk.yandex.com
     elif "yadi.sk" in url or "disk.yandex.com" in url:
@@ -42,7 +42,7 @@ async def generate_directs(url):
             )[0][0]
             print(link)
         except:
-            return "**ERROR:** Cant't download, double check your yadisk link!"
+            return "**ᴇʀʀᴏʀ:** 𝙲𝚊𝚗𝚝'𝚝 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍, 𝚍𝚘𝚞𝚋𝚕𝚎 𝚌𝚑𝚎𝚌𝚔 𝚢𝚘𝚞𝚛 𝚢𝚊𝚍𝚒𝚜𝚔 𝚕𝚒𝚗𝚔!"
 
         api = "https://cloud-api.yandex.net/v1/disk/public/resources/download?public_key={}"
         try:
@@ -53,7 +53,7 @@ async def generate_directs(url):
                 return ourl
         except:
             torlog.exception("Ayee jooo")
-            return "**ERROR:** Cant't download, the yadisk file not found or dowmload limit reached!"
+            return "**ᴇʀʀᴏʀ:** 𝙲𝚊𝚗𝚝'𝚝 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍, 𝚝𝚑𝚎 𝚢𝚊𝚍𝚒𝚜𝚔 𝚏𝚒𝚕𝚎 𝚗𝚘𝚝 𝚏𝚘𝚞𝚗𝚍 𝚘𝚛 𝚍𝚘𝚠𝚖𝚕𝚘𝚊𝚍 𝚕𝚒𝚖𝚒𝚝 𝚛𝚎𝚊𝚌𝚑𝚎𝚍!"
 
     # zippyshare.com
     elif "zippyshare.com" in url:
@@ -79,7 +79,7 @@ async def generate_directs(url):
             urllib.parse.unquote(url.split("/")[-1])
             return ourl
         except:
-            return "**ERROR:** Cant't download, double check your zippyshare link!"
+            return "**ᴇʀʀᴏʀ:** 𝙲𝚊𝚗𝚝'𝚝 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍, 𝚍𝚘𝚞𝚋𝚕𝚎 𝚌𝚑𝚎𝚌𝚔 𝚢𝚘𝚞𝚛 𝚣𝚒𝚙𝚙𝚢𝚜𝚑𝚊𝚛𝚎 𝚕𝚒𝚗𝚔!"
 
     # racaty.net
     elif "racaty.net" in url:
@@ -99,7 +99,7 @@ async def generate_directs(url):
             ourl = bss2.find("a", {"id": "uniqueExpirylink"})["href"]
             return ourl
         except:
-            return "**ERROR:** Cant't download, double check your racaty link!"
+            return "**ᴇʀʀᴏʀ:** 𝙲𝚊𝚗𝚝'𝚝 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍, 𝚍𝚘𝚞𝚋𝚕𝚎 𝚌𝚑𝚎𝚌𝚔 𝚢𝚘𝚞𝚛 𝚛𝚊𝚌𝚊𝚝𝚢 𝚕𝚒𝚗𝚔!"
 
     elif "pixeldrain.com" in url:
         url = url.strip("/ ")
@@ -115,4 +115,4 @@ async def generate_directs(url):
         if restext["success"]:
             return dl_link
         else:
-            return "**ERROR:** Cant't download, {}.".format(restext["value"])
+            return "**ᴇʀʀᴏʀ:** 𝙲𝚊𝚗𝚝'𝚝 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍, {}.".format(restext["value"])
