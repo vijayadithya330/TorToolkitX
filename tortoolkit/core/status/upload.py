@@ -93,7 +93,7 @@ class TGUploadTask(Status):
         return msg
 
     def progress_bar(self, percentage):
-        """Returns a progress bar for download"""
+        """𝚁𝚎𝚝𝚞𝚛𝚗𝚜 𝙰 𝙿𝚛𝚘𝚐𝚛𝚎𝚜𝚜 𝙱𝚊𝚛 𝙵𝚘𝚛 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍"""
         # percentage is on the scale of 0-1
         comp = get_val("COMPLETED_STR")
         ncomp = get_val("REMAINING_STR")
@@ -149,7 +149,7 @@ class RCUploadTask(Status):
         return progress
 
     def progress_bar(self, percentage):
-        """Returns a progress bar for download"""
+        """𝚁𝚎𝚝𝚞𝚛𝚗𝚜 𝙰 𝙿𝚛𝚘𝚐𝚛𝚎𝚜𝚜 𝙱𝚊𝚛 𝙵𝚘𝚛 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍"""
         # percentage is on the scale of 0-1
         comp = get_val("COMPLETED_STR")
         ncomp = get_val("REMAINING_STR")
@@ -179,7 +179,7 @@ class RCUploadTask(Status):
             except FloodWaitError as e:
                 torlog.error("{}".format(e))
             except Exception as e:
-                torlog.info("Not expected {}".format(e))
+                torlog.info("𝙽𝚘𝚝 𝙴𝚡𝚙𝚎𝚌𝚝𝚎𝚍 {}".format(e))
 
     async def is_active(self):
         return self._active
