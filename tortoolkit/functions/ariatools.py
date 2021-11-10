@@ -59,7 +59,7 @@ async def add_magnet(aria_instance, magnetic_link, c_file_name):
     except Exception as e:
         return (
             False,
-            "**FAILED** \n" + str(e) + " \nPlease do not send SLOW links. Read /help",
+            "**𝙵𝙰𝙸𝙻𝙴𝙳** \n" + str(e) + " \n𝙿𝚕𝚎𝚊𝚜𝚎 𝚍𝚘 𝚗𝚘𝚝 𝚜𝚎𝚗𝚍 𝚂𝙻𝙾𝚆 𝚕𝚒𝚗𝚔𝚜. 𝚁𝚎𝚊𝚍 /help",
         )
     else:
         return True, "" + download.gid + ""
@@ -69,7 +69,7 @@ async def add_torrent(aria_instance, torrent_file_path):
     if torrent_file_path is None:
         return (
             False,
-            "**FAILED** \n\nsomething wrongings when trying to add <u>TORRENT</u> file",
+            "**𝙵𝙰𝙸𝙻𝙴𝙳** \n\n𝚜𝚘𝚖𝚎𝚝𝚑𝚒𝚗𝚐 𝚠𝚛𝚘𝚗𝚐𝚒𝚗𝚐𝚜 𝚠𝚑𝚎𝚗 𝚝𝚛𝚢𝚒𝚗𝚐 𝚝𝚘 𝚊𝚍𝚍 <u>𝚃𝙾𝚁𝚁𝙴𝙽𝚃</u> 𝚏𝚒𝚕𝚎",
         )
     if os.path.exists(torrent_file_path):
         # Add Torrent Into Queue
@@ -89,18 +89,18 @@ async def add_torrent(aria_instance, torrent_file_path):
         except Exception as e:
             return (
                 False,
-                "**FAILED** \n"
+                "**𝙵𝙰𝙸𝙻𝙴𝙳** \n"
                 + str(e)
-                + " \nPlease do not send SLOW links. Read /help",
+                + "𝙿𝚕𝚎𝚊𝚜𝚎 𝚍𝚘 𝚗𝚘𝚝 𝚜𝚎𝚗𝚍 𝚂𝙻𝙾𝚆 𝚕𝚒𝚗𝚔𝚜. 𝚁𝚎𝚊𝚍 /help",
             )
         else:
             return True, "" + download.gid + ""
     else:
         return (
             False,
-            "**FAILED** \n"
+            "**𝙵𝙰𝙸𝙻𝙴𝙳** \n"
             + str(e)
-            + " \nPlease try other sources to get workable link",
+            + " \n𝙿𝚕𝚎𝚊𝚜𝚎 𝚝𝚛𝚢 𝚘𝚝𝚑𝚎𝚛 𝚜𝚘𝚞𝚛𝚌𝚎𝚜 𝚝𝚘 𝚐𝚎𝚝 𝚠𝚘𝚛𝚔𝚊𝚋𝚕𝚎 𝚕𝚒𝚗𝚔",
         )
 
 
@@ -114,7 +114,7 @@ async def add_url(aria_instance, text_url, c_file_name):
     except Exception as e:
         return (
             False,
-            "**FAILED** \n" + str(e) + " \nPlease do not send SLOW links. Read /help",
+            "**𝙵𝙰𝙸𝙻𝙴𝙳** \n" + str(e) + " \n𝙿𝚕𝚎𝚊𝚜𝚎 𝚍𝚘 𝚗𝚘𝚝 𝚜𝚎𝚗𝚍 𝚂𝙻𝙾𝚆 𝚕𝚒𝚗𝚔𝚜. 𝚁𝚎𝚊𝚍 /help",
         )
     else:
         return True, "" + download.gid + ""
@@ -143,7 +143,7 @@ async def aria_dl(incoming_link, c_file_name, sent_message_to_update_tg_p, user_
     elif incoming_link.lower().endswith(".torrent"):
         # sagtus, err_message = await add_torrent(aria_instance, incoming_link)
         # sagtus, err_message = await add_url(aria_instance, incoming_link, c_file_name)
-        await ar_task.set_inactive("Can't download this .torrent file")
+        await ar_task.set_inactive("𝙲𝚊𝚗'𝚝 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚝𝚑𝚒𝚜 .𝚝𝚘𝚛𝚛𝚎𝚗𝚝 𝚏𝚒𝚕𝚎")
         return False, ar_task
     else:
         sagtus, err_message = await add_url(aria_instance, incoming_link, c_file_name)
@@ -178,13 +178,13 @@ async def aria_dl(incoming_link, c_file_name, sent_message_to_update_tg_p, user_
                 user_msg=user_msg,
             )
         else:
-            await ar_task.set_inactive("Can't get metadata.\n")
+            await ar_task.set_inactive("𝙲𝚊𝚗'𝚝 𝚐𝚎𝚝 𝚖𝚎𝚝𝚊𝚍𝚊𝚝𝚊.\n")
             return False, ar_task
     await asyncio.sleep(1)
 
     if op is None:
         await ar_task.set_inactive(
-            "Known error. Nothing wrong here. You didn't follow instructions."
+            "𝙺𝚗𝚘𝚠𝚗 𝚎𝚛𝚛𝚘𝚛. 𝙽𝚘𝚝𝚑𝚒𝚗𝚐 𝚠𝚛𝚘𝚗𝚐 𝚑𝚎𝚛𝚎. 𝚈𝚘𝚞 𝚍𝚒𝚍𝚗'𝚝 𝚏𝚘𝚕𝚕𝚘𝚠 𝚒𝚗𝚜𝚝𝚛𝚞𝚌𝚝𝚒𝚘𝚗𝚜."
         )
         return False, ar_task
     else:
@@ -229,7 +229,7 @@ async def check_progress_for_dl(
             )
         else:
             await event.remove(
-                f"**Download completed:** {file.name}\n\n**Size:** {file.total_length_string()}",
+                f"**𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚌𝚘𝚖𝚙𝚕𝚎𝚝𝚎𝚍** {file.name}\n\n**ꜰɪʟᴇ ꜱɪᴢᴇ:** {file.total_length_string()}",
                 buttons=None,
             )
             return True, "**<i>🤩ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴏᴍᴘʟᴇᴛᴇ!</i>**"
