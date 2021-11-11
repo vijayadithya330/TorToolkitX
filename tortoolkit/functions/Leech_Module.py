@@ -167,7 +167,7 @@ async def check_link(msg, rclone=False, is_zip=False, extract=False, prev_msg=No
 
     elif msg.raw_text is not None:
         if msg.raw_text.lower().startswith("magnet:"):
-            rmess = await omess.reply("Scanning....")
+            rmess = await omess.reply("𝚂𝚌𝚊𝚗𝚗𝚒𝚗𝚐...")
 
             mgt = get_magnets(msg.raw_text.strip())
             torrent_return = await QBittorrentWrap.register_torrent(
@@ -210,14 +210,14 @@ async def check_link(msg, rclone=False, is_zip=False, extract=False, prev_msg=No
                         )
                     except:
                         rdict = dict()
-                        torlog.exception("Exception in magnet")
+                        torlog.exception("𝙴𝚡𝚌𝚎𝚙𝚝𝚒𝚘𝚗 𝚒𝚗 𝚖𝚊𝚐𝚗𝚎𝚝")
 
                     await ul_task.set_inactive()
                     await print_files(
                         omess, rdict, dl_task.hash, path=dl_path, size=ul_size
                     )
 
-                    torlog.info("Here are the files to be uploaded {}".format(rdict))
+                    torlog.info("𝙷𝚎𝚛𝚎 𝚊𝚛𝚎 𝚝𝚑𝚎 𝚏𝚒𝚕𝚎𝚜 𝚝𝚘 𝚋𝚎 𝚞𝚙𝚕𝚘𝚊𝚍𝚎𝚍 {}".format(rdict))
                     await QBittorrentWrap.delete_this(dl_task.hash)
 
                 else:
@@ -294,7 +294,7 @@ async def check_link(msg, rclone=False, is_zip=False, extract=False, prev_msg=No
                         omess, rdict, dl_task.hash, path=dl_path, size=ul_size
                     )
 
-                    torlog.info("Here are the fiels uploaded {}".format(rdict))
+                    torlog.info("𝙷𝚎𝚛𝚎 𝚊𝚛𝚎 𝚝𝚑𝚎 𝚏𝚒𝚕𝚎𝚜 𝚝𝚘 𝚋𝚎 𝚞𝚙𝚕𝚘𝚊𝚍𝚎𝚍 {}".format(rdict))
                     await QBittorrentWrap.delete_this(dl_task.hash)
                 else:
                     res = await rclone_driver(dl_path, rmess, omess, dl_task)
@@ -315,7 +315,7 @@ async def check_link(msg, rclone=False, is_zip=False, extract=False, prev_msg=No
             msg.raw_text
             url = msg.raw_text
 
-            rmsg = await omess.reply("**Processing the link...**")
+            rmsg = await omess.reply("**𝙿𝚛𝚘𝚌𝚎𝚜𝚜𝚒𝚗𝚐 𝚝𝚑𝚎 𝚕𝚒𝚗𝚔...**")
 
             path = None
             re_name = None
@@ -341,7 +341,7 @@ async def check_link(msg, rclone=False, is_zip=False, extract=False, prev_msg=No
                         await errored_message(omess, rmsg)
                         return
                     else:
-                        await rmsg.edit(f"**Found direct:** `{url}`")
+                        await rmsg.edit(f"**ꜰᴏᴜɴᴅ ᴅɪʀᴇᴄᴛ:** `{url}`")
                         await aio.sleep(2)
 
                 try:
@@ -405,11 +405,11 @@ async def check_link(msg, rclone=False, is_zip=False, extract=False, prev_msg=No
                         )
                     except:
                         rdict = dict()
-                        torlog.exception("Exception in Direct links.")
+                        torlog.exception("𝙴𝚡𝚌𝚎𝚙𝚝𝚒𝚘𝚗 𝚒𝚗 𝙳𝚒𝚛𝚎𝚌𝚝 𝚕𝚒𝚗𝚔𝚜.")
 
                     await ul_task.set_inactive()
                     await print_files(omess, rdict, path=path, size=ul_size)
-                    torlog.info("Here are the files to be uploaded {}".format(rdict))
+                    torlog.info("𝙷𝚎𝚛𝚎 𝚊𝚛𝚎 𝚝𝚑𝚎 𝚏𝚒𝚕𝚎𝚜 𝚝𝚘 𝚋𝚎 𝚞𝚙𝚕𝚘𝚊𝚍𝚎𝚍 {}".format(rdict))
                 else:
                     res = await rclone_driver(path, rmsg, omess, dl_task)
                     if res is None:
@@ -419,7 +419,7 @@ async def check_link(msg, rclone=False, is_zip=False, extract=False, prev_msg=No
                         )
             elif stat is False:
                 reason = await dl_task.get_error()
-                await rmsg.edit("Failed to download this file.\n" + str(reason))
+                await rmsg.edit("𝙵𝚊𝚒𝚕𝚎𝚍 𝚝𝚘 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚝𝚑𝚒𝚜 𝚏𝚒𝚕𝚎.\n" + str(reason))
                 await errored_message(omess, rmsg)
 
             await clear_stuff(path)
@@ -629,7 +629,7 @@ def calculate_size(path):
             else:
                 return os.path.getsize(path)
         except:
-            torlog.warning("Size Calculation Failed.")
+            torlog.warning("𝚂𝚒𝚣𝚎 𝙲𝚊𝚕𝚌𝚞𝚕𝚊𝚝𝚒𝚘𝚗 𝙵𝚊𝚒𝚕𝚎𝚍.")
             return 0
     else:
         return 0
