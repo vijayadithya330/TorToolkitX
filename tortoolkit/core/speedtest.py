@@ -18,7 +18,7 @@ async def get_speed(message):
     (result["share"])
     string_speed = f"""
 ⏱**__ꜱᴘᴇᴇᴅᴛᴇꜱᴛ ʀᴇꜱᴜʟᴛ...__**
-"""
+
 🖱**Server Name:** `{result["server"]["name"]}`
 🌏**Country:** `{result["server"]["country"]}, {result["server"]["cc"]}`
 👨🏻‍💼**Sponsor:** `{result["server"]["sponsor"]}`
