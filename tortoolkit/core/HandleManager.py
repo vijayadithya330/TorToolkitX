@@ -280,7 +280,7 @@ async def handle_leech_command(e):
         )
 
         conf_mes = await e.reply(
-            f"𝙵𝚒𝚛𝚜𝚝 𝚌𝚕𝚒𝚌𝚔 𝚒𝚏 𝚢𝚘𝚞 𝚠𝚊𝚗𝚝 𝚝𝚘 𝚣𝚒𝚙 𝚝𝚑𝚎 𝚌𝚘𝚗𝚝𝚎𝚗𝚝𝚜 𝚘𝚛 𝚎𝚡𝚝𝚛𝚊𝚌𝚝 𝚊𝚜 𝚊𝚗 𝚊𝚛𝚌𝚑𝚒𝚟𝚎 (𝚘𝚗𝚕𝚢 𝚘𝚗𝚎 𝚠𝚒𝚕𝚕 𝚠𝚘𝚛𝚔 𝚊𝚝 𝚊 𝚝𝚒𝚖𝚎) 𝚝𝚑𝚎𝚗...\n\n<b>ᴄʜᴏᴏꜱᴇ ᴡʜᴇʀᴇ ᴛᴏ ᴜᴘʟᴏᴀᴅ ʏᴏᴜʀ ꜰɪʟᴇꜱ:-</b>\nᴛʜᴇ ꜰɪʟᴇꜱ ᴡɪʟʟ ʙᴇ ᴜᴘʟᴏᴀᴅᴇᴅ ᴛᴏ ᴅᴇꜰᴀᴜʟᴛ ᴅᴇꜱᴛɪɴᴀᴛɪᴏɴ: <b>{get_val('DEFAULT_TIMEOUT')}</b> 𝚊𝚏𝚝𝚎𝚛 𝟼𝟶 𝚜𝚎𝚌 𝚘𝚏 𝚗𝚘 𝚊𝚌𝚝𝚒𝚘𝚗 𝚋𝚢 𝚞𝚜𝚎𝚛.</u>\n\n<b>ꜱᴜᴘᴘᴏꜱᴇᴅ ᴀʀᴄʜɪᴠᴇꜱ ᴛᴏ ᴇxᴛʀᴀᴄᴛ:</b>\nzip, 7z, tar, gzip2, iso, wim, rar, tar.gz, tar.bz2",
+            f"𝙵𝚒𝚛𝚜𝚝 𝚌𝚕𝚒𝚌𝚔 𝚒𝚏 𝚢𝚘𝚞 𝚠𝚊𝚗𝚝 𝚝𝚘 𝚣𝚒𝚙 𝚝𝚑𝚎 𝚌𝚘𝚗𝚝𝚎𝚗𝚝𝚜 𝚘𝚛 𝚎𝚡𝚝𝚛𝚊𝚌𝚝 𝚊𝚜 𝚊𝚗 𝚊𝚛𝚌𝚑𝚒𝚟𝚎 (𝚘𝚗𝚕𝚢 𝚘𝚗𝚎 𝚠𝚒𝚕𝚕 𝚠𝚘𝚛𝚔 𝚊𝚝 𝚊 𝚝𝚒𝚖𝚎) 𝚝𝚑𝚎𝚗...\n\n<b>ᴄʜᴏᴏꜱᴇ ᴡʜᴇʀᴇ ᴛᴏ ᴜᴘʟᴏᴀᴅ ʏᴏᴜʀ ꜰɪʟᴇꜱ:-</b>\nᴛʜᴇ ꜰɪʟᴇꜱ ᴡɪʟʟ ʙᴇ ᴜᴘʟᴏᴀᴅᴇᴅ ᴛᴏ ᴅᴇꜰᴀᴜʟᴛ ᴅᴇꜱᴛɪɴᴀᴛɪᴏɴ: <b>{𝚐𝚎𝚝_𝚟𝚊𝚕('𝙳𝙴𝙵𝙰𝚄𝙻𝚃_𝚃𝙸𝙼𝙴𝙾𝚄𝚃')}</b> 𝚊𝚏𝚝𝚎𝚛 𝟼𝟶 𝚜𝚎𝚌 𝚘𝚏 𝚗𝚘 𝚊𝚌𝚝𝚒𝚘𝚗 𝚋𝚢 𝚞𝚜𝚎𝚛.</u>\n\n<b>ꜱᴜᴘᴘᴏꜱᴇᴅ ᴀʀᴄʜɪᴠᴇꜱ ᴛᴏ ᴇxᴛʀᴀᴄᴛ:</b>\nzip, 7z, tar, gzip2, iso, wim, rar, tar.gz, tar.bz2",
             parse_mode="html",
             buttons=buts,
         )
@@ -737,26 +737,28 @@ async def handle_server_command(message):
 
     if callbk:
         msg = (
-            f"<b>BOT UPTIME:-</b> {diff}\n\n"
-            "<b>CPU STATS:-</b>\n"
-            f"Cores: {cores} Logical: {lcores}\n"
-            f"CPU Frequency: {freqcurrent}  Mhz Max: {freqmax}\n"
-            f"CPU Utilization: {cpupercent}%\n"
+            f"<b><i>ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ...</i></b>"
+            f"\n\n"
+            f"<b>ʙᴏᴛ ᴜᴘᴛɪᴍᴇ:</b> {diff}\n\n"
+            "<b><i>ᴄᴘᴜ ꜱᴛᴀᴛꜱ...</i></b>\n"
+            f"**ᴄᴏʀᴇꜱ:** {cores} ʟᴏɢɪᴄᴀʟ: {lcores}\n"
+            f"**ᴄᴘᴜ ꜰʀᴇQᴜᴇɴᴄʏ:** {freqcurrent}  **ᴍʜᴢ ᴍᴀx:** {freqmax}\n"
+            f"**ᴄᴘᴜ ᴜᴛɪʟɪᴢᴀᴛɪᴏɴ:** {cpupercent}%\n"
             "\n"
-            "<b>STORAGE STATS:-</b>\n"
-            f"Total: {totaldsk}\n"
-            f"Used: {useddsk}\n"
-            f"Free: {freedsk}\n"
+            "<b><i>ꜱᴛᴏʀᴀɢᴇ ꜱᴛᴀᴛꜱ...</i></b>\n"
+            f"**ᴛᴏᴛᴀʟ:** {totaldsk}\n"
+            f"**ᴜꜱᴇᴅ:** {useddsk}\n"
+            f"**ꜰʀᴇᴇ:** {freedsk}\n"
             "\n"
-            "<b>MEMORY STATS:-</b>\n"
-            f"Available: {memavailable}\n"
-            f"Total: {memtotal}\n"
-            f"Usage: {mempercent}%\n"
-            f"Free: {memfree}\n"
+            "<b><i>ᴍᴇᴍᴏʀʏ ꜱᴛᴀᴛꜱ...</i></b>\n"
+            f"**ᴀᴠᴀɪʟᴀʙʟᴇ:** {memavailable}\n"
+            f"**ᴛᴏᴛᴀʟ:** {memtotal}\n"
+            f"**ᴜꜱᴇᴅ:** {mempercent}%\n"
+            f"**ꜰʀᴇᴇ:** {memfree}\n"
             "\n"
-            "<b>TRANSFER INFO:</b>\n"
-            f"Download: {dlb}\n"
-            f"Upload: {upb}\n"
+            "<b><i>ᴛʀᴀɴꜱꜰᴇʀ ɪɴꜰᴏ...</i></b>\n"
+            f"**ᴅᴏᴡɴʟᴏᴀᴅ:** {dlb}\n"
+            f"**ᴜᴘʟᴏᴀᴅ:** {upb}\n"
         )
         await message.edit(msg, parse_mode="html", buttons=None)
     else:
@@ -766,14 +768,16 @@ async def handle_server_command(message):
             storage_percent = 0
 
         msg = (
-            f"<b>BOT UPTIME:-</b> {diff}\n\n"
-            f"CPU Utilization: {progress_bar(cpupercent)} - {cpupercent}%\n\n"
-            f"Storage used:- {progress_bar(storage_percent)} - {storage_percent}%\n"
-            f"Total: {totaldsk} Free: {freedsk}\n\n"
-            f"Memory used:- {progress_bar(mempercent)} - {mempercent}%\n"
-            f"Total: {memtotal} Free: {memfree}\n\n"
-            f"Transfer Download:- {dlb}\n"
-            f"Transfer Upload:- {upb}\n"
+            f"<b><i>ʙᴏᴛ ꜱᴇʀᴠᴇʀ...</i></b>"
+            f"\n\n"
+            f"ʙᴏᴛ ᴜᴘᴛɪᴍᴇ: {diff}\n\n"
+            f"ᴄᴘᴜ ᴜᴛɪʟɪᴢᴀᴛɪᴏɴ: {progress_bar(cpupercent)} - {cpupercent}%\n\n"
+            f"ꜱᴛᴏʀᴀɢᴇ ᴜꜱᴇᴅ: {progress_bar(storage_percent)} - {storage_percent}%\n"
+            f"ᴛᴏᴛᴀʟ: {totaldsk} ꜰʀᴇᴇ: {freedsk}\n\n"
+            f"ᴍᴇᴍᴏʀʏ ᴜꜱᴇᴅ: {progress_bar(mempercent)} - {mempercent}%\n"
+            f"ᴛᴏᴛᴀʟ: {memtotal} ꜰʀᴇᴇ: {memfree}\n\n"
+            f"ᴛʀᴀɴꜱꜰᴇʀ ᴅᴏᴡɴʟᴏᴀᴅ: {dlb}\n"
+            f"ᴛʀᴀɴꜱꜰᴇʀ ᴜᴘʟᴏᴀᴅ: {upb}\n"
         )
         await message.reply(
             msg,
