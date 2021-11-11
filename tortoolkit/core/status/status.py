@@ -94,7 +94,7 @@ class QBTask(Status):
     async def get_state(self):
         # stalled
         if self._torrent.state == "stalledDL":
-            return "𝚃𝚘𝚛𝚛𝚎𝚗𝚝 <code>{}</code> 𝙸𝚜 𝚂𝚝𝚊𝚕𝚕𝚎𝚍 (𝚆𝚊𝚒𝚝𝚒𝚗𝚐 𝙵𝚘𝚛 𝙲𝚘𝚗𝚗𝚎𝚌𝚝𝚒𝚘𝚗) 𝚃𝚎𝚖𝚙𝚘𝚛𝚊𝚛𝚒𝚕𝚢.".format(
+            return "𝚃𝚘𝚛𝚛𝚎𝚗𝚝 {} 𝙸𝚜 𝚂𝚝𝚊𝚕𝚕𝚎𝚍 (𝚆𝚊𝚒𝚝𝚒𝚗𝚐 𝙵𝚘𝚛 𝙲𝚘𝚗𝚗𝚎𝚌𝚝𝚒𝚘𝚗) 𝚃𝚎𝚖𝚙𝚘𝚛𝚊𝚛𝚒𝚕𝚢.".format(
                 self._torrent.name
             )
         # meta stage
@@ -242,7 +242,7 @@ class ARTask(Status):
             human_readable_bytes(self._dl_file.total_length),
         )
         msg += "<b>🕒ETA:</b> <b>{}</b>\n".format(self._dl_file.eta_string())
-        msg += "<b>🖱Conns:</b>{} <b>\n".format(self._dl_file.connections)
+        msg += "<b>🔗Conns:</b> {}\n".format(self._dl_file.connections)
         msg += "<b>📡Using engine:</b> <code>Aria2 For DirectLinks</code>"
 
         return msg
