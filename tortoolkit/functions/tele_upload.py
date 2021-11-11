@@ -322,11 +322,11 @@ async def upload_a_file(
 
     uploader_id = None
     if queue is not None:
-        torlog.info(f"Waiting for the worker here for {file_name}")
-        msg = await msg.edit(f"{msg.text}\nWaiting for a uploaders to get free... ")
+        torlog.info(f"𝚆𝚊𝚒𝚝𝚒𝚗𝚐 𝚏𝚘𝚛 𝚝𝚑𝚎 𝚠𝚘𝚛𝚔𝚎𝚛 𝚑𝚎𝚛𝚎 𝚏𝚘𝚛 {file_name}")
+        msg = await msg.edit(f"{msg.text}\n𝚆𝚊𝚒𝚝𝚒𝚗𝚐 𝚏𝚘𝚛 𝚊 𝚞𝚙𝚕𝚘𝚊𝚍𝚎𝚛𝚜 𝚝𝚘 𝚐𝚎𝚝 𝚏𝚛𝚎𝚎... ")
         uploader_id = await queue.get()
         torlog.info(
-            f"Waiting over for the worker here for {file_name} aquired worker {uploader_id}"
+            f"𝚆𝚊𝚒𝚝𝚒𝚗𝚐 𝙾𝚟𝚎𝚛 𝚏𝚘𝚛 𝚝𝚑𝚎 𝚠𝚘𝚛𝚔𝚎𝚛 𝚑𝚎𝚛𝚎 𝚏𝚘𝚛 {file_name} 𝚊𝚚𝚞𝚒𝚛𝚎𝚍 𝚠𝚘𝚛𝚔𝚎𝚛 {uploader_id}"
         )
 
     out_msg = None
@@ -343,7 +343,7 @@ async def upload_a_file(
 
     try:
         if get_val("FAST_UPLOAD"):
-            torlog.info("Fast upload is enabled")
+            torlog.info("𝙵𝚊𝚜𝚝 𝚞𝚙𝚕𝚘𝚊𝚍 𝚒𝚜 𝚎𝚗𝚊𝚋𝚕𝚎𝚍")
             with open(path, "rb") as filee:
                 path = await upload_file(
                     message.client,
@@ -392,7 +392,7 @@ async def upload_a_file(
                     )
                 except VideoContentTypeInvalidError:
                     attrs, _ = get_attributes(opath, force_document=True)
-                    torlog.warning("Streamable file send failed fallback to document.")
+                    torlog.warning("𝚂𝚝𝚛𝚎𝚊𝚖𝚊𝚋𝚕𝚎 𝚏𝚒𝚕𝚎 𝚜𝚎𝚗𝚍 𝚏𝚊𝚒𝚕𝚎𝚍 𝚏𝚊𝚕𝚕𝚋𝚊𝚌𝚔 𝚝𝚘 𝚍𝚘𝚌𝚞𝚖𝚎𝚗𝚝.")
                     out_msg = await msg.client.send_file(
                         msg.to_id,
                         file=path,
@@ -566,13 +566,13 @@ async def upload_single_file(
             )
 
             if queue is not None:
-                torlog.info(f"Waiting for the worker here for {file_name}")
+                torlog.info(f"𝚆𝚊𝚒𝚝𝚒𝚗𝚐 𝚏𝚘𝚛 𝚝𝚑𝚎 𝚠𝚘𝚛𝚔𝚎𝚛 𝚑𝚎𝚛𝚎 𝚏𝚘𝚛 {𝚏𝚒𝚕𝚎_𝚗𝚊𝚖𝚎}")
                 message_for_progress_display = await message_for_progress_display.edit(
-                    f"{message_for_progress_display.text}\nWaiting for a uploaders to get free... "
+                    f"{message_for_progress_display.text}\n𝚆𝚊𝚒𝚝𝚒𝚗𝚐 𝚏𝚘𝚛 𝚊 𝚞𝚙𝚕𝚘𝚊𝚍𝚎𝚛𝚜 𝚝𝚘 𝚐𝚎𝚝 𝚏𝚛𝚎𝚎... "
                 )
                 uploader_id = await queue.get()
                 torlog.info(
-                    f"Waiting over for the worker here for {file_name} aquired worker {uploader_id}"
+                    f"𝚆𝚊𝚒𝚝𝚒𝚗𝚐 𝚘𝚟𝚎𝚛 𝚏𝚘𝚛 𝚝𝚑𝚎 𝚠𝚘𝚛𝚔𝚎𝚛 𝚑𝚎𝚛𝚎 𝚏𝚘𝚛 {𝚏𝚒𝚕𝚎_𝚗𝚊𝚖𝚎} 𝚊𝚚𝚞𝚒𝚛𝚎𝚍 𝚠𝚘𝚛𝚔𝚎𝚛 {𝚞𝚙𝚕𝚘𝚊𝚍𝚎𝚛_𝚒𝚍}"
                 )
 
         if ftype == "video" and not force_docs:
