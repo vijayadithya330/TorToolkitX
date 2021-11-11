@@ -91,7 +91,7 @@ class VarHolder:
 
         if val is None:
             torlog.error(
-                "The variable was not found in either the constants, environment or database. Variable is :- {}".format(
+                "𝚃𝚑𝚎 𝚟𝚊𝚛𝚒𝚊𝚋𝚕𝚎 𝚠𝚊𝚜 𝚗𝚘𝚝 𝚏𝚘𝚞𝚗𝚍 𝚒𝚗 𝚎𝚒𝚝𝚑𝚎𝚛 𝚝𝚑𝚎 𝚌𝚘𝚗𝚜𝚝𝚊𝚗𝚝𝚜, 𝚎𝚗𝚟𝚒𝚛𝚘𝚗𝚖𝚎𝚗𝚝 𝚘𝚛 𝚍𝚊𝚝𝚊𝚋𝚊𝚜𝚎. 𝚅𝚊𝚛𝚒𝚊𝚋𝚕𝚎 𝚒𝚜 :- {}".format(
                     variable
                 )
             )
