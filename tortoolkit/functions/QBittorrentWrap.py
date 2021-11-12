@@ -338,7 +338,7 @@ async def update_progress(
                     await task.set_path(savepath)
                     await task.set_done()
                     await message.edit(
-                        "📥**__ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴏᴍᴘʟᴇᴛᴇ:__** \n\n**🗂ꜰɪʟᴇ ɴᴀᴍᴇ:** `{}`\n\n**💽ꜰɪʟᴇ ꜱɪᴢᴇ:** `{}`\n\n**📍ᴛᴏ ᴘᴀᴛʜ:** `{}`".format(
+                        "📥**__ᴅᴏᴡɴʟᴏᴀᴅ ᴄᴏᴍᴘʟᴇᴛᴇ...__** \n\n**🗂ꜰɪʟᴇ ɴᴀᴍᴇ:** `{}`\n\n**💽ꜰɪʟᴇ ꜱɪᴢᴇ:** `{}`\n\n**📍ᴛᴏ ᴘᴀᴛʜ:** `{}`".format(
                             tor_info.name,
                             human_readable_bytes(tor_info.total_size),
                             tor_info.save_path,
