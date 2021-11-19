@@ -73,7 +73,7 @@ class QBTask(Status):
             human_readable_bytes(self._torrent.dlspeed, postfix="/s"),
             human_readable_bytes(self._torrent.upspeed, postfix="/s"),
         )
-        msg += "<b>🎳Prog:</b> {} - {}%\n".format(
+        msg += "🎳Prog: {} - {}%\n".format(
             self.progress_bar(self._torrent.progress),
             round(self._torrent.progress * 100, 2),
         )
@@ -233,7 +233,7 @@ class ARTask(Status):
         msg += "<b>♾Down:</b> {} <b>Up:</b> {}\n".format(
             self._dl_file.download_speed_string(), self._dl_file.upload_speed_string()
         )
-        msg += "<b>🎳Prog:</b> {} - {}%\n".format(
+        msg += "🎳Prog: {} - {}%\n".format(
             self.progress_bar(self._dl_file.progress / 100),
             round(self._dl_file.progress, 2),
         )
@@ -369,7 +369,7 @@ class MegaDl(Status):
 
         msg = "<b><i>📥ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...</i> \n\n🗂File Name:</b> {} \n".format(self._dl_info["name"])
         msg += "<b>⏱Speed:</b> {}\n".format(human_readable_bytes(self._dl_info["speed"]))
-        msg += "<b>🎳Prog:</b> {} - {}%\n".format(
+        msg += "🎳Prog: {} - {}%\n".format(
             self.progress_bar(
                 (self._dl_info["completed_length"] / self._dl_info["total_length"])
             ),
