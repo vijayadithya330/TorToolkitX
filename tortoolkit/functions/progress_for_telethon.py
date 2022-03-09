@@ -38,7 +38,7 @@ async def progress(
             seconds=estimated_total_time / 1000
         )
 
-        progress = "🎳[{0}{1}] = <b>{2}%</b>\n".format(
+        progress = "[{0}{1}] = <b>{2}%</b>\n".format(
             "".join(
                 [get_val("COMPLETED_STR") for i in range(math.floor(percentage / 10))]
             ),
@@ -51,7 +51,7 @@ async def progress(
             round(percentage, 2),
         )
 
-        tmp = progress + "👀<b>Status:</b> {0} <b>Of</b> {1}\n⏱<b>Speed:</b> {2}/s\n🕒<b>ETA:</b> {3}\n📡<b>Using Engine:</b> Telethon".format(
+        tmp = progress + "<b>Status:</b> {0} <b>Of</b> {1}\n<b>Speed:</b> {2}/s\n<b>ETA:</b> {3}\n<b>Using Engine:</b> Telethon".format(
             human_readable_bytes(current),
             human_readable_bytes(total),
             human_readable_bytes(speed),
