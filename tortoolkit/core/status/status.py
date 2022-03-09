@@ -229,7 +229,7 @@ class ARTask(Status):
         except:
             pass
 
-        msg = "<b><i>ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...</i> \n\nFile Name:</b> {} \n".format(downloading_dir_name)
+        msg = "<b><i>📥ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...</i> \n\nFile Name:</b> {} \n".format(downloading_dir_name)
         msg += "<b>Down:</b> {} <b>Up:</b> {}\n".format(
             self._dl_file.download_speed_string(), self._dl_file.upload_speed_string()
         )
@@ -367,7 +367,7 @@ class MegaDl(Status):
     async def create_message(self):
         # Getting the vars pre handed
 
-        msg = "<b><i>ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...</i> \n\nFile Name:</b> {} \n".format(self._dl_info["name"])
+        msg = "<b><i>📥ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...</i> \n\nFile Name:</b> {} \n".format(self._dl_info["name"])
         msg += "<b>Speed:</b> {}\n".format(human_readable_bytes(self._dl_info["speed"]))
         msg += "Prog: {} - {}%\n".format(
             self.progress_bar(
