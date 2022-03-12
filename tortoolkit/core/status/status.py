@@ -68,26 +68,26 @@ class QBTask(Status):
         return self._omess.sender_id
 
     async def create_message(self):
-        msg = "<b>📥<i>ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...</i> \n\nFile Name:</b> {} \n".format(self._torrent.name)
-        msg += "<b>Down:</b> {} <b>Up:</b> {}\n".format(
+        msg = "<b>📥<i>ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...</i> \n\nꜰɪʟᴇ ɴᴀᴍᴇ:</b> {} \n".format(self._torrent.name)
+        msg += "<b>ᴅᴏᴡɴ:</b> {} <b>ᴜᴘ:</b> {}\n".format(
             human_readable_bytes(self._torrent.dlspeed, postfix="/s"),
             human_readable_bytes(self._torrent.upspeed, postfix="/s"),
         )
-        msg += "Prog: {} - {}%\n".format(
+        msg += "<b>ᴘʀᴏɢ: {} - {}%\n</b>".format(
             self.progress_bar(self._torrent.progress),
             round(self._torrent.progress * 100, 2),
         )
-        msg += "<b>Status:</b> {} <b>Of</b> {}\n".format(
+        msg += "<b>ꜱᴛᴀᴛᴜꜱ:</b> {} <b>ᴏꜰ</b> {}\n".format(
             human_readable_bytes(self._torrent.downloaded),
             human_readable_bytes(self._torrent.total_size),
         )
-        msg += "<b>ETA:</b> <b>{}</b>\n".format(
+        msg += "<b>ᴇᴛᴀ:</b> <b>{}</b>\n".format(
             human_readable_timedelta(self._torrent.eta)
         )
-        msg += "<b>S:</b>{} <b>L:</b>{}\n".format(
+        msg += "<b>ꜱ:</b>{} <b>ʟ:</b>{}\n".format(
             self._torrent.num_seeds, self._torrent.num_leechs
         )
-        msg += "<b>Using engine:</b> <code>qBittorrent</code>"
+        msg += "<b>ᴜꜱɪɴɢ ᴇɴɢɪɴᴇ:</b> <code>qBittorrent</code>"
 
         return msg
 
@@ -229,21 +229,21 @@ class ARTask(Status):
         except:
             pass
 
-        msg = "<b><i>📥ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...</i> \n\nFile Name:</b> {} \n".format(downloading_dir_name)
-        msg += "<b>Down:</b> {} <b>Up:</b> {}\n".format(
+        msg = "<b><i>📥ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...</i> \n\nꜰɪʟᴇ ɴᴀᴍᴇ:</b> {} \n".format(downloading_dir_name)
+        msg += "<b>ᴅᴏᴡɴ:</b> {} <b>ᴜᴘ:</b> {}\n".format(
             self._dl_file.download_speed_string(), self._dl_file.upload_speed_string()
         )
-        msg += "Prog: {} - {}%\n".format(
+        msg += "<b>ᴘʀᴏɢ: {} - {}%\n</b>".format(
             self.progress_bar(self._dl_file.progress / 100),
             round(self._dl_file.progress, 2),
         )
-        msg += "<b>Status:</b> {} of {}\n".format(
+        msg += "<b>ꜱᴛᴀᴛᴜꜱ:</b> {} ᴏꜰ {}\n".format(
             human_readable_bytes(self._dl_file.completed_length),
             human_readable_bytes(self._dl_file.total_length),
         )
-        msg += "<b>ETA:</b> <b>{}</b>\n".format(self._dl_file.eta_string())
-        msg += "<b>Conns:</b> {}\n".format(self._dl_file.connections)
-        msg += "<b>Using engine:</b> <code>Aria2 For DirectLinks</code>"
+        msg += "<b>ᴇᴛᴀ:</b> <b>{}</b>\n".format(self._dl_file.eta_string())
+        msg += "<b>ᴄᴏɴɴꜱ:</b> {}\n".format(self._dl_file.connections)
+        msg += "<b>ᴜꜱɪɴɢ ᴇɴɢɪɴᴇ:</b> <code>Aria2 For DirectLinks</code>"
 
         return msg
 
@@ -367,9 +367,9 @@ class MegaDl(Status):
     async def create_message(self):
         # Getting the vars pre handed
 
-        msg = "<b><i>📥ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...</i> \n\nFile Name:</b> {} \n".format(self._dl_info["name"])
-        msg += "<b>Speed:</b> {}\n".format(human_readable_bytes(self._dl_info["speed"]))
-        msg += "Prog: {} - {}%\n".format(
+        msg = "<b><i>📥ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...</i> \n\nꜰɪʟᴇ ɴᴀᴍᴇ:</b> {} \n".format(self._dl_info["name"])
+        msg += "<b>ꜱᴘᴇᴇᴅ:</b> {}\n".format(human_readable_bytes(self._dl_info["speed"]))
+        msg += "<b>ᴘʀᴏɢ: {} - {}%\n</b>".format(
             self.progress_bar(
                 (self._dl_info["completed_length"] / self._dl_info["total_length"])
             ),
@@ -379,13 +379,13 @@ class MegaDl(Status):
                 2,
             ),
         )
-        msg += "<b>Status:</b> {} of {}\n".format(
+        msg += "<b>ꜱᴛᴀᴛᴜꜱ:</b> {} ᴏꜰ {}\n".format(
             human_readable_bytes(self._dl_info["completed_length"]),
             human_readable_bytes(self._dl_info["total_length"]),
         )
-        msg += "<b>ETA:</b> <b>N/A</b>\n"
+        msg += "<b>ᴇᴛᴀ:</b> <b>N/A</b>\n"
 
-        msg += "<b>Using engine:</b> <code>Mega DL</code>"
+        msg += "<b>ᴜꜱɪɴɢ ᴇɴɢɪɴᴇ:</b> <code>Mega DL</code>"
 
         return msg
 
