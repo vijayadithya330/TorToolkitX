@@ -78,18 +78,18 @@ class TGUploadTask(Status):
         self._current_file = str(name)
 
     async def create_message(self):
-        msg = "<b>📤<i>ᴜᴘʟᴏᴀᴅɪɴɢ...</i></b>\n\nFile Name:</b> {} \n".format(self._current_file)
+        msg = "<b>📤<i>ᴜᴘʟᴏᴀᴅɪɴɢ...</i></b>\n\nꜰɪʟᴇ ɴᴀᴍᴇ:</b> {} \n".format(self._current_file)
         prg = 0
         try:
             prg = self._uploaded_files / self._files
 
         except ZeroDivisionError:
             pass
-        msg += "Progress: {} - {}%\n".format(self.progress_bar(prg), prg * 100)
-        msg += "<b>Files:</b> {} of {} done.\n".format(
+        msg += "ᴘʀᴏɢʀᴇꜱꜱ: {} - {}%\n".format(self.progress_bar(prg), prg * 100)
+        msg += "<b>ꜰɪʟᴇꜱ:</b> {} ᴏꜰ {} done.\n".format(
             self._uploaded_files, self._files
         )
-        msg += "<b>Using Engine: </b> <code>TG Upload</code>\n"
+        msg += "<b>ᴜꜱɪɴɢ ᴇɴɢɪɴᴇ: </b> <code>TG Upload</code>\n"
         return msg
 
     def progress_bar(self, percentage):
@@ -142,8 +142,8 @@ class RCUploadTask(Status):
         nstr = nstr.strip()
         nstr = nstr.split(",")
         prg = nstr[1].strip("% ")
-        prg = "Progress:- {} - {}%".format(self.progress_bar(prg), prg)
-        progress = "<b>Uploaded:- {} \n{} \nSpeed:- {} \nETA:- {}</b> \n<b>Using Engine:- </b><code>RCLONE</code>".format(
+        prg = "ᴘʀᴏɢʀᴇꜱꜱ:- {} - {}%".format(self.progress_bar(prg), prg)
+        progress = "<b>Uploaded:- {} \n{} \nꜱᴘᴇᴇᴅ:- {} \nᴇᴛᴀ:- {}</b> \n<b>ᴜꜱɪɴɢ ᴇɴɢɪɴᴇ:- </b><code>RCLONE</code>".format(
             nstr[0], prg, nstr[2], nstr[3].replace("ETA", "")
         )
         return progress
